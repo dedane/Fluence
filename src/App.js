@@ -1,11 +1,20 @@
 
 import Navbar from './Components/Navbar'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function App() {
+  const theme = createTheme({
+    typography: {
+      fontFamily: [
+        'Red Rose',
+        'cursive',
+      ].join(',')
+    }
+  })
   return (
-    <div className="App">
+    <ThemeProvider theme={theme} className="App">
       <Navbar />
-    </div>
+    </ThemeProvider>
   );
 }
 
