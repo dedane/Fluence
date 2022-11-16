@@ -1,7 +1,28 @@
 
-import { Typography, TextField,Button,Stack,Grid } from '@mui/material'
+import { 
+      Typography, 
+      TextField,
+      Button,
+      Stack,
+      Grid,
+      Card,
+      Container,
+      CardMedia,
+      CardContent,
+      Rating } from '@mui/material'
+      import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system'
 import React from 'react'
+import StarIcon from '@mui/icons-material/Star';
+
+const StyledRating = styled(Rating)({
+  '& .MuiRating-iconFilled': {
+    color: '#ff6d75',
+  },
+  '& .MuiRating-iconHover': {
+    color: '#ff3d47',
+  },
+});
 
 function Home() {
   return (
@@ -36,7 +57,7 @@ function Home() {
       </Box>
       </Stack>
       </Box>
-       <Box mt={20} sx={{ justifyContent: 'center'}}  mb={15}> 
+       <Box mt={20} sx={{ justifyContent: 'center'}} id='sponsors'  mb={15}> 
           <Grid container 
                 spacing={15} 
                 direction="row"
@@ -45,8 +66,7 @@ function Home() {
               alignItems:"center",
               height: '70px'
                 }}
-                >
-                
+                >   
          <Grid >
             <Box  >
               <img src='https://ik.imagekit.io/ugyodiq15/mbtToken_AkI7nkRdf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101977' alt='MBT token'/>
@@ -64,9 +84,116 @@ function Home() {
           </Grid>
           </Grid>
         </Box>
+        <Box mb={5}>
+        
+            
+              <Typography variant='h3' align='center' >
+                  Inspiration for your next adventure
+                </Typography>
+            <Container>
+              
+                <Grid container spacing={1} maxWidth={12}>
+                { metaHome.map((meta) => (
+                    <Grid item xs={6} >
+                      <Card key={meta.img}>
+                        <CardMedia>
+                          <img src={`${meta.img}`} alt={`${meta.title}`} />
+                        </CardMedia>
+                        <CardContent>
+                          <Grid>
+                            <Grid item>{`$  `}</Grid>
+                            <Grid item></Grid>
+                          </Grid>
+                          <Grid>
+                            <Grid item></Grid>
+                            <Grid item></Grid>
+                          </Grid>
+
+                        </CardContent>
+                        <StyledRating
+        name="customized-color"
+        defaultValue={5}
+        getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
+        precision={0.5}
+        icon={<StarIcon fontSize="inherit" />}
+        
+      />
+                      </Card>
+                    </Grid> ))}
+                </Grid> 
+            </Container>
+          
+        </Box>
       
     </Box>
   )
 }
+
+const metaHome = [
+  {
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    title: 'house1',
+    name:'Desert King',
+    price: '1MBT per night',
+    distance: '2345k away',
+    availability: 'available for 2 weeks stay'
+  },
+  {
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    name:'Desert King',
+    title: 'house1',
+    price: '1MBT per night',
+    distance: '2345k away',
+    availability: 'available for 2 weeks stay'
+  },
+  { 
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    name:'Desert King',
+    title: 'house1',
+    price: '1MBT per night',
+    distance: '2345k away',
+    availability: 'available for 2 weeks stay'
+  },
+  {
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    name:'Desert King',
+    title: 'house1',
+    price: '1MBT per night',
+    distance: '2345k away',
+    availability: 'available for 2 weeks stay'
+  },
+  { 
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    name:'Desert King',
+    title: 'house1',
+    price: '1MBT per night',
+    distance: '2345k away',
+    availability: 'available for 2 weeks stay'
+  },
+  {
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    name:'Desert King',
+    title: 'house1',
+    price: '1MBT per night',
+    distance: '2345k away',
+    availability: 'available for 2 weeks stay'
+  },
+  { 
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    name:'Desert King',
+    title: 'house1',
+    price: '1MBT per night',
+    distance: '2345k away',
+    availability: 'available for 2 weeks stay'
+  },
+  {
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    name:'Desert King',
+    title: 'house1',
+    price: '1MBT per night',
+    distance: '2345k away',
+    availability: 'available for 2 weeks stay'
+  },
+]
 
 export default Home
