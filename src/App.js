@@ -2,6 +2,7 @@
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Home from './Pages/Home'
 
 function App() {
   const theme = createTheme({
@@ -13,8 +14,9 @@ function App() {
     }
   })
   return (
-    <ThemeProvider theme={theme} className="App">
+    <ThemeProvider theme={theme} >
       <Navbar />
+      <Home />
       <Footer />
     </ThemeProvider>
   );
