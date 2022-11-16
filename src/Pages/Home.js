@@ -29,7 +29,7 @@ function Home() {
         </Box>
       </Box>
       
-      <Box direction='row' mx='auto' mt={10}>
+      <Box direction='row' mx='auto' mt={5}>
         <img src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' alt='hero-house-images' />
       </Box>
       </Stack>
