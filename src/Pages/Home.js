@@ -1,11 +1,11 @@
-import { Typography,Container,TextField,Button } from '@mui/material'
+import { Typography,Container,TextField,Button,Stack } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 
 function Home() {
   return (
     <div>
-      
+      <Stack direction='row'>
       <Container direction='row'>
         <Box mt={10}>
               <Typography sx={{ display: 'block', 
@@ -27,6 +27,10 @@ function Home() {
                   </Box>
         </Box>
       </Container>
+      <Container>
+        <img src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' alt='hero-house-images' />
+      </Container>
+      </Stack>
     </div>
   )
 }
