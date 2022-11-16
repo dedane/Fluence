@@ -21,7 +21,7 @@ function Footer() {
           <Grid item xs={8} sm={3} >
             <Box mr={10}>
             <Box>
-            <img src='https://ik.imagekit.io/ugyodiq15/Group_w2l_ITd4T.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668567639604' alt='logo' />
+            <img sx={{ width: 200, height: 200 }}  src='https://ik.imagekit.io/ugyodiq15/Group_w2l_ITd4T.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668567639604' alt='logo' />
             </Box>
             <Box mt={10}>
             <Stack direction="row" spacing={5}>
