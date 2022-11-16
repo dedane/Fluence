@@ -1,23 +1,24 @@
 import React from 'react'
-import { Grid,Box,Container,CssBaseline,AppBar, Typography, Stack } from '@mui/material'
+import { Grid,Box,Container,CssBaseline,Typography, Stack } from '@mui/material'
 import { FaFacebookF,FaInstagram,FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <AppBar sx={{ background: ' #1D1D1E', position: 'relative'}}>
-      <CssBaseline />
-    <footer component="footer" >
+   
+    <footer  >
       
-     
+     <CssBaseline />
       <Box component="footer" 
       sx={{
+          backgroundColor: ' #1D1D1E',
+          color: 'white',
           py: 3,
           px: 2,
           mt: 'auto'}}>
-      <Container >
+      <Container maxWidth="l" sx={{ py: 6 }}>
         <Grid container spacing={10} direction="row"
-  justifyContent="center"
-  alignItems="center">
+              justifyContent="center"
+              alignItems="center">
           <Grid item xs={8} sm={3} >
             <Box mr={10}>
             <Box>
@@ -74,7 +75,7 @@ function Footer() {
         </Container>
         </Box>
     </footer>
-    </AppBar>
+   
   )
 }
 

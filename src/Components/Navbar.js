@@ -15,7 +15,7 @@ const theme = createTheme({
 function Navbar() {
   return (
     <ThemeProvider theme={theme}>
-        <AppBar sx={{  background: 'linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%)' }} position="relative" >
+        <AppBar sx={{  background: 'linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%)' }} position="sticky" >
             <Container>
                 <Toolbar>
                     <img src='https://ik.imagekit.io/ugyodiq15/metabnb_logo_4dedweRgu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668218617798' alt='logo' />

@@ -1,11 +1,13 @@
-import { Typography,Container,TextField,Button,Stack } from '@mui/material'
+
+import { Typography, TextField,Button,Stack,Grid } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 
 function Home() {
   return (
-    <div>
-      <Stack direction='row'>
+    <Box>
+      <Box>
+      <Stack  width='100vw' direction='row'>
         
       <Box direction='row' mx='auto'>
         <Box mt={10}>
@@ -33,7 +35,37 @@ function Home() {
         <img src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' alt='hero-house-images' />
       </Box>
       </Stack>
-    </div>
+      </Box>
+       <Box mt={20} sx={{ justifyContent: 'center'}}  mb={15}> 
+          <Grid container 
+                spacing={15} 
+                direction="row"
+                sx={{backgroundColor:'#A02279',
+                justifyContent:"space-evenly",
+              alignItems:"center",
+              height: '70px'
+                }}
+                >
+                
+         <Grid >
+            <Box  >
+              <img src='https://ik.imagekit.io/ugyodiq15/mbtToken_AkI7nkRdf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101977' alt='MBT token'/>
+            </Box>
+          </Grid>
+          <Grid >
+                  <Box >
+                    <img src='https://ik.imagekit.io/ugyodiq15/metamask_yLTSCpwZE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101953' alt='Metamask'/>
+                  </Box>  
+                </Grid>
+          <Grid >
+            <Box>
+              <img src='https://ik.imagekit.io/ugyodiq15/opensea_FX6HDDCZ6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101949' alt='open sea'/>
+            </Box>
+          </Grid>
+          </Grid>
+        </Box>
+      
+    </Box>
   )
 }
 
