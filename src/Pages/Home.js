@@ -10,19 +10,19 @@ import {
       CardMedia,
       CardContent,
       Rating } from '@mui/material'
-      import { styled } from '@mui/material/styles';
+      //import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system'
 import React from 'react'
-import StarIcon from '@mui/icons-material/Star';
+/* import StarIcon from '@mui/icons-material/Star';
 
 const StyledRating = styled(Rating)({
   '& .MuiRating-iconFilled': {
-    color: '#ff6d75',
+    color: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
   },
   '& .MuiRating-iconHover': {
-    color: '#ff3d47',
+    color: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
   },
-});
+}); */
 
 function Home() {
   return (
@@ -91,38 +91,49 @@ function Home() {
                   Inspiration for your next adventure
                 </Typography>
             <Container>
-              
-                <Grid container spacing={1} maxWidth={12}>
-                { metaHome.map((meta) => (
-                    <Grid item xs={6} >
-                      <Card key={meta.img}>
-                        <CardMedia>
-                          <img src={`${meta.img}`} alt={`${meta.title}`} />
+                <Grid container spacing={1} >
+                    <Grid item >
+                    {metaHome.map((meta)  => (
+                      <Card variant="outlined" sx={{bordeRadius: '15px',
+                                                    width: '292px',
+                                                    height: '372px',
+                                                    borderRadius: '15px'}} >
+                        <CardMedia 
+                        sx={{marginLeft: '16px', marginTop: '12px'}}
+                             ml={10} mt={10} >
+                             
+                          <img style={{left: '16px'}} width= '260px'
+                              height= '265px' src={meta.img} alt='1' />
                         </CardMedia>
                         <CardContent>
-                          <Grid>
-                            <Grid item>{`$  `}</Grid>
-                            <Grid item></Grid>
+                          <Grid container direction='row' sx={{justifyContent: 'space-between'}}>
+                            <Box ml={2}><Typography sx={{fontSize: '12px'}} >{meta.name}</Typography></Box>
+                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.price}</Typography></Box>
                           </Grid>
-                          <Grid>
-                            <Grid item></Grid>
-                            <Grid item></Grid>
+                          <Grid  container direction='row' sx={{justifyContent: 'space-between'}}>
+                            <Box  mt={1} ml={2}><Typography sx={{fontSize: '12px'}} >{meta.distance}</Typography></Box>
+                            <Box mt={1}><Typography sx={{fontSize: '12px', fontWeight: '400'}} >{meta.availability}</Typography></Box>
                           </Grid>
-
+                          <Box ml={1.5} mt={1} sx={{justifyContent: 'space-between'}}>
+                            <Rating size='small' mx='auto' name="meta-ratings" defaultValue={5}/>
+                          </Box>
+                          
                         </CardContent>
-                        <StyledRating
-        name="customized-color"
-        defaultValue={5}
-        getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
-        precision={0.5}
-        icon={<StarIcon fontSize="inherit" />}
+                        {/* <StyledRating
+                          name="customized-color"
+                          defaultValue={5}
+                          getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
+                          precision={0.5}
+                          icon={<StarIcon fontSize="inherit" />} */}
+                         
         
-      />
-                      </Card>
-                    </Grid> ))}
+      
+                      </Card> ))}
+                    </Grid>
+                    
                 </Grid> 
-            </Container>
-          
+            
+                </Container>
         </Box>
       
     </Box>
@@ -132,7 +143,7 @@ function Home() {
 const metaHome = [
   {
     img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
-    title: 'house1',
+    title: 1,
     name:'Desert King',
     price: '1MBT per night',
     distance: '2345k away',
@@ -141,7 +152,7 @@ const metaHome = [
   {
     img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
     name:'Desert King',
-    title: 'house1',
+    title: 2,
     price: '1MBT per night',
     distance: '2345k away',
     availability: 'available for 2 weeks stay'
@@ -149,7 +160,7 @@ const metaHome = [
   { 
     img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
     name:'Desert King',
-    title: 'house1',
+    title: 3,
     price: '1MBT per night',
     distance: '2345k away',
     availability: 'available for 2 weeks stay'
@@ -157,7 +168,7 @@ const metaHome = [
   {
     img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
     name:'Desert King',
-    title: 'house1',
+    title: 4,
     price: '1MBT per night',
     distance: '2345k away',
     availability: 'available for 2 weeks stay'
@@ -165,7 +176,7 @@ const metaHome = [
   { 
     img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
     name:'Desert King',
-    title: 'house1',
+    title: 5,
     price: '1MBT per night',
     distance: '2345k away',
     availability: 'available for 2 weeks stay'
@@ -173,7 +184,7 @@ const metaHome = [
   {
     img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
     name:'Desert King',
-    title: 'house1',
+    title: 6,
     price: '1MBT per night',
     distance: '2345k away',
     availability: 'available for 2 weeks stay'
@@ -181,7 +192,7 @@ const metaHome = [
   { 
     img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
     name:'Desert King',
-    title: 'house1',
+    title: 7,
     price: '1MBT per night',
     distance: '2345k away',
     availability: 'available for 2 weeks stay'
@@ -189,7 +200,7 @@ const metaHome = [
   {
     img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
     name:'Desert King',
-    title: 'house1',
+    title: 8,
     price: '1MBT per night',
     distance: '2345k away',
     availability: 'available for 2 weeks stay'
