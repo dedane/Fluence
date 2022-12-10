@@ -1,4 +1,5 @@
 
+
 import { 
       Typography, 
       TextField,
@@ -142,7 +143,35 @@ function Home() {
                     
                 </Grid> 
             
-                </Container>  
+                </Container> 
+
+                
+                  <Box mt={10}  sx={{backgroundColor:'#A02279',
+                                            justifyContent:"space-evenly"}}>
+                                              
+                <Grid container
+                sx={{height: '100%'}}
+                direction="row"
+                justifyContent="center">
+                    <Box >
+                        <Typography sx={{color: '#ffffff'}} mt={10} variant='h2'>
+                            Metabnb NFTs
+                        </Typography>
+                        <Typography sx={{color: '#ffffff'}} display='block' mt={15} mb={10}>
+                                Discover our NFT gift cards collection. 
+                                Loyal <br></br>customers gets amazing gift cards which are <br></br>traded as NFTs.
+                                These NFTs gives our cutomer <br></br>access to loads of our exclusive services.
+                        </Typography>
+                        <Button variant="contained"  sx={{ backgroundColor: '#FFFFFF', width: '230px', height: '54px', color: '#A02279' }}>Learn More</Button>
+                    </Box>
+                    
+                    <Box >
+                          <img  src='https://ik.imagekit.io/ugyodiq15/housing_r7HKiS5lh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625139774' alt='crib-art' />
+                    </Box>
+                    </Grid>
+                   
+                  </Box>
+                
         </Box>
       
     </Box>

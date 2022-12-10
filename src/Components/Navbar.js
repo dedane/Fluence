@@ -50,7 +50,7 @@ function Navbar() {
                     </Box>
                     <Box ml={20}>
                              <Button   variant='contained'  sx={{background: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
-borderRadius: '10px'}}>Connect Wallet</Button>
+borderRadius: '10px'}} >Connect Wallet</Button>
                     </Box>
                         
                     
