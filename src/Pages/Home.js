@@ -87,13 +87,20 @@ function Home() {
         <Box mb={5}>
         
             
-              <Typography variant='h3' align='center' >
+              <Typography variant='h3' mb={10} align='center' >
                   Inspiration for your next adventure
                 </Typography>
-            <Container>
-                <Grid container spacing={1} >
-                    <Grid item >
+           <Container>
+                <Grid container
+                columnSpacing={12}
+                rowSpacing={2}
+                direction="row"
+                justifyContent="center"
+                 
+                  >
+                    
                     {metaHome.map((meta)  => (
+                      <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
                       <Card variant="outlined" sx={{bordeRadius: '15px',
                                                     width: '292px',
                                                     height: '372px',
@@ -102,7 +109,7 @@ function Home() {
                         sx={{marginLeft: '16px', marginTop: '12px'}}
                              ml={10} mt={10} >
                              
-                          <img style={{left: '16px'}} width= '260px'
+                          <img  width= '260px'
                               height= '265px' src={meta.img} alt='1' />
                         </CardMedia>
                         <CardContent>
@@ -128,12 +135,14 @@ function Home() {
                          
         
       
-                      </Card> ))}
-                    </Grid>
+                      </Card> 
+                      </Grid>
+                      ))}
+                    
                     
                 </Grid> 
             
-                </Container>
+                </Container>  
         </Box>
       
     </Box>
