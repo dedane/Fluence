@@ -85,7 +85,7 @@ function Home() {
           </Grid>
           </Grid>
         </Box>
-        <Box mb={5}>
+        <Box >
         
             
               <Typography variant='h3' mb={10} align='center' >
@@ -146,8 +146,11 @@ function Home() {
                 </Container> 
 
                 
-                  <Box mt={10}  sx={{backgroundColor:'#A02279',
-                                            justifyContent:"space-evenly"}}>
+                  <Box 
+                      mt={10}  
+                      sx={{backgroundColor:'#A02279',
+                      justifyContent:"space-evenly",
+                      }}>
                                               
                 <Grid container
                 sx={{height: '100%'}}

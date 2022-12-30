@@ -15,7 +15,7 @@ function Footer() {
           py: 3,
           position: 'initial',
           px: 2,
-          mt: 'auto'}}>
+          }}>
       <Container maxWidth="l" sx={{ py: 6 }}>
         <Grid container spacing={10} direction="row"
               justifyContent="center"
