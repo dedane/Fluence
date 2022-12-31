@@ -2,6 +2,7 @@ import React from 'react'
 import AppBar from '@mui/material/AppBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Toolbar,Container,Box,Button,  Typography } from '@mui/material';
+import { Link } from "react-router-dom";
 
 const theme = createTheme({
     typography: {
@@ -28,12 +29,13 @@ function Navbar() {
                                             lineHeight: '25px',
                                             color: '#434343'}}>Home</Button> 
 
-                            <Button sx={{fontFamily: 'Red Rose',
+                            <Link  sx={{fontFamily: 'Red Rose',
                                             fontStyle: 'normal',
                                             fontWeight: '300',
                                             fontSize: '15px',
                                             lineHeight: '25px',
-                                            color: '#434343'}}>Place to stay</Button>
+                                            color: '#434343'}}
+                                            to='/place'>Place to stay</Link>
                             
                             <Button sx={{fontFamily: 'Red Rose',fontStyle: 'normal',
                                             fontWeight: '400',
