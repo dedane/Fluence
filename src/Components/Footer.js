@@ -13,7 +13,7 @@ function Footer() {
           backgroundColor: ' #1D1D1E',
           color: 'white',
           py: 3,
-          position: 'initial',
+          
           px: 2,
           }}>
       <Container maxWidth="l" sx={{ py: 6 }}>

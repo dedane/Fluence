@@ -28,10 +28,10 @@ const StyledRating = styled(Rating)({
 function Home() {
   return (
     <Box>
-      <Box>
-      <Stack  width='100vw' direction='row'>
-        
-      <Box direction='row' mx='auto'>
+      <Container Container spacing={3}>
+    
+        <Grid container direction="row" height='100vh' justifyContent="center" alignItems="center">
+      <Grid item xs={6} direction='row' >
         <Box mt={10}>
               <Typography sx={{ display: 'block', 
                 fontSize: '45px', 
@@ -43,21 +43,21 @@ function Home() {
         <Box mt={4}> 
                   <Typography variant='h6' display='block'>
                     we provide you access to luxury and affordable
-                   houses in the <br></br> metaverse, get a chance to turn 
-                   your <br></br>imagination to reality at your comfort zone
+                   houses in the  metaverse, get a chance to turn 
+                   your imagination to reality at your comfort zone
                   </Typography>
                   <Box mt={5} mb={5}>
                   <TextField sx={{width: '500'}}  label="search for location" />
                   <Button mt={10} sx={{ backgroundColor: '#A02279', width: '230px', height: '54px' }} variant="contained">Search</Button>
                   </Box>
         </Box>
-      </Box>
+      </Grid>
       
-      <Box direction='row' mx='auto' mt={5}>
+      <Grid item xs={6} direction='row'  >
         <img src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' alt='hero-house-images' />
-      </Box>
-      </Stack>
-      </Box>
+      </Grid>
+      </Grid>
+      </Container>
        <Box mt={20} sx={{ justifyContent: 'center'}} id='sponsors'  mb={15}> 
           <Grid container 
                 spacing={15} 
@@ -92,7 +92,7 @@ function Home() {
                   Inspiration for your next adventure
                 </Typography>
                 <Box display="flex" alignItems="center" height="100vh" justifyContent='center'>
-                  <Container>
+                  <Container alignItems='center' justifyContent='center'>
                 <Grid container
                 columnSpacing={12}
                 rowSpacing={2}
