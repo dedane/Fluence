@@ -91,13 +91,14 @@ function Home() {
               <Typography variant='h3' mb={10} align='center' >
                   Inspiration for your next adventure
                 </Typography>
-           <Container>
+                <Box display="flex" alignItems="center" height="100vh" justifyContent='center'>
+                  <Container>
                 <Grid container
                 columnSpacing={12}
                 rowSpacing={2}
                 direction="row"
                 justifyContent="center"
-                 
+                 alignItems="center"
                   >
                     
                     {metaHome.map((meta)  => (
@@ -142,8 +143,8 @@ function Home() {
                     
                     
                 </Grid> 
-            
-                </Container> 
+                </Container>
+                </Box> 
 
                 
                   <Box 
