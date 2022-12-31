@@ -4,7 +4,7 @@ import Footer from './Components/Footer'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Routes, Route } from "react-router-dom";
 import Home from './Pages/Home'
-import Place from './Pages/place'
+import Place from './Pages/Place'
 
 function App() {
   const theme = createTheme({
@@ -20,7 +20,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' element={<Home />} ></Route>
-      <Route path='/places' element={<Place />}></Route>
+      <Route path='/place' element={<Place />}></Route>
     </Routes>
     <Footer /> 
     </ThemeProvider>

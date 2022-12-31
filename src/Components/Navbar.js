@@ -23,17 +23,26 @@ function Navbar() {
                     <Box sx={{ justifyContent: 'center'}}   ml={20}>
                             
 
-                                <Button sx={{fontStyle: 'normal',
+                                <Link style={{fontStyle: 'normal',
                                             fontWeight: '300',
-                                            fontSize: '15px',
+                                            marginTop: '15',
+                                            marginRight: '15px',
+                                            fontSize: '17px',
                                             lineHeight: '25px',
-                                            color: '#434343'}}>Home</Button> 
+                                            textDecoration:'none',
+                                            alignItems: 'center',
+                                            textAlign: 'center',
+                                            color: '#434343'}}
+                                            to='/'>Home</Link> 
 
-                            <Link  sx={{fontFamily: 'Red Rose',
+                            <Link  style={{fontFamily: 'Red Rose',
                                             fontStyle: 'normal',
-                                            fontWeight: '300',
-                                            fontSize: '15px',
+                                            alignItems: 'center',
+                                            textAlign: 'center',
+                                            fontWeight: '400',
+                                            fontSize: '17px',
                                             lineHeight: '25px',
+                                            textDecoration:'none',
                                             color: '#434343'}}
                                             to='/place'>Place to stay</Link>
                             
