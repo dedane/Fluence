@@ -50,36 +50,39 @@ function Place() {
 
           </Grid>
       </Box>
-      <Container mx={10}>
+      <Box mb={10} justifyContent="spaceEvenly">
+               <Container > 
+               
                 <Grid container
-                columnSpacing={12}
-                rowSpacing={2}
+                height='100vh'
                 direction="row"
-                justifyContent="center"
-                 
+                justifyContent="center" 
+                alignItems="center"
                   >
                     
                     {metaHome.map((meta)  => (
                       <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
                       <Card variant="outlined" sx={{bordeRadius: '15px',
-                                                    width: '292px',
-                                                    height: '372px',
+                                                    width: '250px',
+                                                    height: '320px',
                                                     borderRadius: '15px'}} >
                         <CardMedia 
                         sx={{marginLeft: '16px', marginTop: '12px'}}
                              ml={10} mt={10} >
                              
-                          <img  width= '260px'
-                              height= '265px' src={meta.img} alt='1' />
+                          <img  width= '220px'
+                              height= '180px' src={meta.img} alt='1' />
                         </CardMedia>
                         <CardContent>
-                          <Grid container direction='row' sx={{justifyContent: 'space-between'}}>
+                          <Grid>
+                          <Grid container direction='column' sx={{justifyContent: 'flex-start'}}>
                             <Box ml={2}><Typography sx={{fontSize: '12px'}} >{meta.name}</Typography></Box>
-                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.price}</Typography></Box>
+                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.availability}</Typography></Box>
                           </Grid>
-                          <Grid  container direction='row' sx={{justifyContent: 'space-between'}}>
+                          <Grid  container direction='column' sx={{justifyContent: 'flex-end'}}>
                             <Box  mt={1} ml={2}><Typography sx={{fontSize: '12px'}} >{meta.distance}</Typography></Box>
-                            <Box mt={1}><Typography sx={{fontSize: '12px', fontWeight: '400'}} >{meta.availability}</Typography></Box>
+                            <Box mt={1}><Typography sx={{fontSize: '12px', fontWeight: '200'}} >{meta.availability}</Typography></Box>
+                          </Grid>
                           </Grid>
                           <Box ml={1.5} mt={1} sx={{justifyContent: 'space-between'}}>
                             <Rating size='small' mx='auto' name="meta-ratings" defaultValue={5}/>
@@ -101,8 +104,9 @@ function Place() {
                     
                     
                 </Grid> 
-            
-                </Container> 
+                
+                </Container>  
+                </Box>  
     </Box>
   )
 }

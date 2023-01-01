@@ -4,13 +4,14 @@ import {
       Typography, 
       TextField,
       Button,
-      Stack,
       Grid,
       Card,
       Container,
       CardMedia,
+      
       CardContent,
       Rating } from '@mui/material'
+    
       //import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system'
 import React from 'react'
@@ -29,7 +30,6 @@ function Home() {
   return (
     <Box>
       <Container Container spacing={3}>
-    
         <Grid container direction="row" height='100vh' justifyContent="center" alignItems="center">
       <Grid item xs={6} direction='row' >
         <Box mt={10}>
@@ -54,11 +54,16 @@ function Home() {
       </Grid>
       
       <Grid item xs={6} direction='row'  >
-        <img src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' alt='hero-house-images' />
+        <img 
+              src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' 
+              style={{
+              width:'20',
+              height:'30' }}
+              alt='hero-house-images' />
       </Grid>
       </Grid>
       </Container>
-       <Box mt={20} sx={{ justifyContent: 'center'}} id='sponsors'  mb={15}> 
+       <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center'}} id='sponsors'  mb={5}> 
           <Grid container 
                 spacing={15} 
                 direction="row"
@@ -87,32 +92,33 @@ function Home() {
         </Box>
         <Box >
         
-            
-              <Typography variant='h3' mb={10} align='center' >
+            <Box justifyContent="center" alignItems="center">
+              <Typography variant='h3' mb={5} align='center' >
                   Inspiration for your next adventure
                 </Typography>
-                <Box display="flex" alignItems="center" height="100vh" justifyContent='center'>
-                  <Container alignItems='center' justifyContent='center'>
+            </Box>  
+            <Box mb={10} justifyContent="spaceEvenly">
+               <Container > 
+               
                 <Grid container
-                columnSpacing={12}
-                rowSpacing={2}
+                height='100vh'
                 direction="row"
-                justifyContent="center"
-                 alignItems="center"
+                justifyContent="center" 
+                alignItems="center"
                   >
                     
                     {metaHome.map((meta)  => (
                       <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
                       <Card variant="outlined" sx={{bordeRadius: '15px',
-                                                    width: '292px',
-                                                    height: '372px',
+                                                    width: '250px',
+                                                    height: '320px',
                                                     borderRadius: '15px'}} >
                         <CardMedia 
                         sx={{marginLeft: '16px', marginTop: '12px'}}
                              ml={10} mt={10} >
                              
-                          <img  width= '260px'
-                              height= '265px' src={meta.img} alt='1' />
+                          <img  width= '220px'
+                              height= '180px' src={meta.img} alt='1' />
                         </CardMedia>
                         <CardContent>
                           <Grid container direction='row' sx={{justifyContent: 'space-between'}}>
@@ -143,25 +149,27 @@ function Home() {
                     
                     
                 </Grid> 
-                </Container>
-                </Box> 
+                
+                </Container>  
+                </Box>  
 
                 
-                  <Box 
-                      mt={10}  
+                  <Box  
                       sx={{backgroundColor:'#A02279',
                       justifyContent:"space-evenly",
                       }}>
                                               
-                <Grid container
-                sx={{height: '100%'}}
+                <Grid 
+                container
+                height='100vh'
                 direction="row"
-                justifyContent="center">
+                justifyContent="center" 
+                alignItems="center">
                     <Box >
                         <Typography sx={{color: '#ffffff'}} mt={10} variant='h2'>
                             Metabnb NFTs
                         </Typography>
-                        <Typography sx={{color: '#ffffff'}} display='block' mt={15} mb={10}>
+                        <Typography sx={{color: '#ffffff'}} display='block' mt={5} mb={5}>
                                 Discover our NFT gift cards collection. 
                                 Loyal <br></br>customers gets amazing gift cards which are <br></br>traded as NFTs.
                                 These NFTs gives our cutomer <br></br>access to loads of our exclusive services.
@@ -169,9 +177,11 @@ function Home() {
                         <Button variant="contained"  sx={{ backgroundColor: '#FFFFFF', width: '230px', height: '54px', color: '#A02279' }}>Learn More</Button>
                     </Box>
                     
-                    <Box >
-                          <img  src='https://ik.imagekit.io/ugyodiq15/housing_r7HKiS5lh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625139774' alt='crib-art' />
-                    </Box>
+                    
+                          <img width= '600px'
+                          justifyContent='center'
+                              height= '500px' src="https://ik.imagekit.io/ugyodiq15/housing_r7HKiS5lh.png" alt='crib-art' />
+                   
                     </Grid>
                    
                   </Box>
