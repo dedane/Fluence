@@ -74,16 +74,16 @@ function Place() {
                               height= '180px' src={meta.img} alt='1' />
                         </CardMedia>
                         <CardContent>
-                          <Grid>
-                          <Grid container direction='column' sx={{justifyContent: 'flex-start'}}>
-                            <Box ml={2}><Typography sx={{fontSize: '12px'}} >{meta.name}</Typography></Box>
-                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.availability}</Typography></Box>
+                         <Grid container direction='row'  justifyContent="center" >
+                          <Grid item direction='row' >
+                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.name}</Typography></Box>
+                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.distance}</Typography></Box>
                           </Grid>
-                          <Grid  container direction='column' sx={{justifyContent: 'flex-end'}}>
-                            <Box  mt={1} ml={2}><Typography sx={{fontSize: '12px'}} >{meta.distance}</Typography></Box>
-                            <Box mt={1}><Typography sx={{fontSize: '12px', fontWeight: '200'}} >{meta.availability}</Typography></Box>
+                          <Grid  item direction='row' >
+                            <Box  mt={1} ><Typography sx={{fontSize: '12px'}} >{meta.price}</Typography></Box>
+                            <Box ><Typography sx={{fontSize: '12px', fontWeight: '200'}} >{meta.availability}</Typography></Box>
                           </Grid>
-                          </Grid>
+                          </Grid> 
                           <Box ml={1.5} mt={1} sx={{justifyContent: 'space-between'}}>
                             <Rating size='small' mx='auto' name="meta-ratings" defaultValue={5}/>
                           </Box>
