@@ -1,19 +1,18 @@
 import React from 'react'
-import { Grid,Box,Container,CssBaseline,Typography, Stack } from '@mui/material'
+import { Grid,Box,Container,Typography, Stack } from '@mui/material'
 import { FaFacebookF,FaInstagram,FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
    
-    <footer  >
+    <Box  >
       
-     <CssBaseline />
+    
       <Box component="footer" 
       sx={{
           backgroundColor: ' #1D1D1E',
           color: 'white',
           py: 3,
-          
           px: 2,
           }}>
       <Container maxWidth="l" sx={{ py: 6 }}>
@@ -75,7 +74,7 @@ function Footer() {
         </Grid>
         </Container>
         </Box>
-    </footer>
+    </Box>
    
   )
 }

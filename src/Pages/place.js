@@ -2,6 +2,7 @@ import React from 'react'
 import { Box,Grid,Button,FormControl,
     InputLabel,
     OutlinedInput,
+    
     Select,  Typography, Card, Container, Rating, CardMedia, CardContent
    } from '@mui/material'
     import TuneIcon from '@mui/icons-material/Tune';
@@ -50,11 +51,12 @@ function Place() {
 
           </Grid>
       </Box>
-      <Box mb={10} justifyContent="spaceEvenly">
+      <Box mb={10}>
                <Container > 
                
                 <Grid container
-                height='100vh'
+                
+                spacing={8}
                 direction="row"
                 justifyContent="center" 
                 alignItems="center"
@@ -63,30 +65,34 @@ function Place() {
                     {metaHome.map((meta)  => (
                       <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
                       <Card variant="outlined" sx={{bordeRadius: '15px',
-                                                    width: '250px',
-                                                    height: '320px',
+                                                    width: '292px',
+                                                    height: '372px',
                                                     borderRadius: '15px'}} >
                         <CardMedia 
                         sx={{marginLeft: '16px', marginTop: '12px'}}
                              ml={10} mt={10} >
                              
-                          <img  width= '220px'
-                              height= '180px' src={meta.img} alt='1' />
+                          <img  width= '260px'
+                              height= '265px' src={meta.img} alt='1' />
                         </CardMedia>
                         <CardContent>
-                         <Grid container direction='row'  justifyContent="center" >
-                          <Grid item direction='row' >
-                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.name}</Typography></Box>
+                        <Grid container   spacing={2} >
+                          <Grid item  xs={4}>
+                            
+                            <Box mb={1}><Typography sx={{fontSize: '12px'}} >{meta.name}</Typography></Box>
                             <Box ><Typography sx={{fontSize: '12px'}} >{meta.distance}</Typography></Box>
-                          </Grid>
-                          <Grid  item direction='row' >
-                            <Box  mt={1} ><Typography sx={{fontSize: '12px'}} >{meta.price}</Typography></Box>
-                            <Box ><Typography sx={{fontSize: '12px', fontWeight: '200'}} >{meta.availability}</Typography></Box>
-                          </Grid>
-                          </Grid> 
-                          <Box ml={1.5} mt={1} sx={{justifyContent: 'space-between'}}>
+                            <Box  mt={1} sx={{justifyContent: 'space-between'}}>
                             <Rating size='small' mx='auto' name="meta-ratings" defaultValue={5}/>
                           </Box>
+                          </Grid>
+                          <Grid  item  xs={8}>
+                            
+                            <Box mb={1}><Typography sx={{fontSize: '12px'}}  fontWeight='bold'>{meta.price}</Typography></Box>
+                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.availability}</Typography></Box>
+                            
+                          </Grid>
+                          </Grid> 
+                          
                           
                         </CardContent>
                         {/* <StyledRating
@@ -106,7 +112,7 @@ function Place() {
                 </Grid> 
                 
                 </Container>  
-                </Box>  
+                </Box>
     </Box>
   )
 }
