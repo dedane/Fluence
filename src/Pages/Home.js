@@ -165,14 +165,14 @@ function Home() {
                       sx={{backgroundColor:'#A02279',
                       justifyContent:"space-evenly",
                       }}>
-                                              
+                 <Container>                             
                 <Grid 
                 container
                 height='100vh'
                 direction="row"
                 justifyContent="center" 
                 alignItems="center">
-                    <Box >
+                    <Grid item xs={6}>
                         <Typography sx={{color: '#ffffff'}} mt={10} variant='h2'>
                             Metabnb NFTs
                         </Typography>
@@ -182,15 +182,15 @@ function Home() {
                                 These NFTs gives our cutomer <br></br>access to loads of our exclusive services.
                         </Typography>
                         <Button variant="contained"  sx={{ backgroundColor: '#FFFFFF', width: '230px', height: '54px', color: '#A02279' }}>Learn More</Button>
-                    </Box>
+                    </Grid>
                     
-                    
+                    <Grid item xs={6}>
                           <img width= '600px'
                           justifyContent='center'
                               height= '500px' src="https://ik.imagekit.io/ugyodiq15/housing_r7HKiS5lh.png" alt='crib-art' />
-                   
+                   </Grid>
                     </Grid>
-                   
+                    </Container>
                   </Box>
                 
         </Box>
