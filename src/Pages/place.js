@@ -1,8 +1,9 @@
 import React from 'react'
-import { Box,Grid,Button,FormControl,
+
+import { Box,Grid,Button,FormControl,InputAdornment,
     InputLabel,
     OutlinedInput,
-    
+    Icon,
     Select,  Typography, Card, Container, Rating, CardMedia, CardContent
    } from '@mui/material'
     import TuneIcon from '@mui/icons-material/Tune';
@@ -42,10 +43,19 @@ function Place() {
                 <Button sx={{textDecoration:'none', color: '#434343'}}>farm</Button>
             </Grid>
             <Grid>
-                <FormControl  sx={{ m: 1, minWidth: 120 }}>
-                  <InputLabel > Location</InputLabel>
-                  <Select id="demo-simple-select-helper-label" input={<OutlinedInput name='Location' id='my-location' />}
-                  IconComponent={() => <TuneIcon />}></Select>
+                <FormControl  sx={{ minWidth: 150 }}>
+                  <InputLabel> Location</InputLabel>
+                  <Select
+    
+    inputProps={{
+      startAdornment: (
+        <InputAdornment position="start">
+          <Icon>TuneIcon</Icon>
+        </InputAdornment>
+      ),
+    }}
+  ></Select>
+
                   </FormControl>
             </Grid>
 

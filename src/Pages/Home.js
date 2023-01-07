@@ -33,7 +33,8 @@ function Home() {
         <Grid container direction="row" height='100vh' justifyContent="center" alignItems="center">
       <Grid item xs={6} direction='row' >
         <Box mt={10}>
-              <Typography sx={{ display: 'block', 
+              <Typography sx={{ 
+                display: 'block', 
                 fontSize: '45px', 
                 fontStyle: 'normal',
                 fontWeight: '400', 
@@ -133,7 +134,7 @@ function Home() {
                           </Grid>
                           <Grid  item  xs={8}>
                             
-                            <Box mb={1}><Typography sx={{fontSize: '12px'}}  fontWeight='bold'>{meta.price}</Typography></Box>
+                            <Box mb={1}><Typography sx={{fontSize: '12px', fontWeight: '700'}}  >{meta.price}</Typography></Box>
                             <Box ><Typography sx={{fontSize: '12px'}} >{meta.availability}</Typography></Box>
                             
                           </Grid>
