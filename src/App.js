@@ -20,7 +20,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' element={<Home />} ></Route>
-      <Route path='/place' element={<Place />}></Route>
+      <Route path='/Place' element={<Place />}></Route>
     </Routes>
     <Footer /> 
     </ThemeProvider>
