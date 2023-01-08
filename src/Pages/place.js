@@ -137,7 +137,7 @@ const metaHome = [
     availability: 'available for 2 weeks stay'
   },
   {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__1__Sz06JdePTO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277556',
     name:'Desert King',
     title: 2,
     price: '1MBT per night',
@@ -145,7 +145,7 @@ const metaHome = [
     availability: 'available for 2 weeks stay'
   },
   { 
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__2__FOX9ChLJm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277555',
     name:'Desert King',
     title: 3,
     price: '1MBT per night',
@@ -153,7 +153,7 @@ const metaHome = [
     availability: 'available for 2 weeks stay'
   },
   {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__3__RWHOeAhCC.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277552',
     name:'Desert King',
     title: 4,
     price: '1MBT per night',
@@ -161,7 +161,7 @@ const metaHome = [
     availability: 'available for 2 weeks stay'
   },
   { 
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__4__ZzayBQGcR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625329018',
     name:'Desert King',
     title: 5,
     price: '1MBT per night',
@@ -169,7 +169,7 @@ const metaHome = [
     availability: 'available for 2 weeks stay'
   },
   {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__5__JuF3zRIWT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625329008',
     name:'Desert King',
     title: 6,
     price: '1MBT per night',
@@ -177,7 +177,7 @@ const metaHome = [
     availability: 'available for 2 weeks stay'
   },
   { 
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__6__9rIS7oh5cf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625329015',
     name:'Desert King',
     title: 7,
     price: '1MBT per night',
@@ -185,7 +185,7 @@ const metaHome = [
     availability: 'available for 2 weeks stay'
   },
   {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__7__hR1hzXlEC.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625329269',
     name:'Desert King',
     title: 8,
     price: '1MBT per night',
@@ -193,5 +193,6 @@ const metaHome = [
     availability: 'available for 2 weeks stay'
   },
 ]
+
 
 export default Place
