@@ -2,11 +2,11 @@ import React from 'react'
 
 import { Box,Grid,Button,FormControl,InputAdornment,
     InputLabel,
-    OutlinedInput,
+   
     Icon,
     Select,  Typography, Card, Container, Rating, CardMedia, CardContent
    } from '@mui/material'
-    import TuneIcon from '@mui/icons-material/Tune';
+   
 
 
 function Place() {
@@ -73,7 +73,7 @@ function Place() {
                   >
                     
                     {metaHome.map((meta)  => (
-                      <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+                      <Grid item xs={12} sm={6} md={4} lg={3} xl={3}>
                       <Card variant="outlined" sx={{bordeRadius: '15px',
                                                     width: '292px',
                                                     height: '372px',

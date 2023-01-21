@@ -110,7 +110,7 @@ function Home() {
                   >
                     
                     {metaHome.map((meta)  => (
-                      <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
+                      <Grid item xs={12} sm={6} md={4} lg={3} xl={3}>
                       <Card variant="outlined" sx={{bordeRadius: '15px',
                                                     width: '292px',
                                                     height: '372px',
