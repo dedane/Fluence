@@ -2,6 +2,6 @@
   "rewrites":  [
     {"source": "/(.*)",
      "destination": "/"},
-     {"source": "/Place", "destination": "./Pages/Place"}
+     {"source": "/Place", "destination": "./src/Pages/Place"}
   ]
 }
