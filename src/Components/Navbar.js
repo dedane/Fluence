@@ -18,12 +18,28 @@ const theme = createTheme({
  
   const drawerWidth = 240;
 
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+  };
+
 function Navbar({to, label}) {
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => {
+    setOpen(true);
+  } 
+  const handleClose = () => {
+    setOpen(false);
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -128,10 +144,11 @@ borderRadius: '10px'}} >Connect Wallet</Button>
                             
                             </Box>      
                     <Box ml={20}>
-                             <Button   variant='contained'  sx={{background: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
+                             <Button   onClick={handleOpen} variant='contained'  sx={{background: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
 borderRadius: '10px'}} >Connect Wallet</Button>
-<Modal>
-      <Box>
+<Modal open={open}
+        onClose={handleClose}>
+      <Box sx={style}>
         <Typography>
           Connect Wallet
         </Typography>
