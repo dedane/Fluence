@@ -2,7 +2,7 @@ import React from 'react'
 import AppBar from '@mui/material/AppBar';
 import Drawer from '@mui/material/Drawer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Toolbar,Container,Box,Modal,Button,Grid,List,Divider,ListItem, Typography } from '@mui/material';
+import { Toolbar,Container,IconButton, Box,Modal,Button,Grid,List,Divider,ListItem, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Link } from "react-router-dom";
@@ -151,14 +151,17 @@ borderRadius: '10px'}} >Connect Wallet</Button>
 <Modal open={open}
         onClose={handleClose}>
       <Box sx={style}>
-        <Grid container mb={4} spacing={24} direction='row'>
+        <Grid container mb={4} spacing={22} direction='row' alignItems='center' justifyContent='center'>
           <Grid item>
           <Typography variant="h5">
           Connect Wallet
         </Typography>
           </Grid>
           <Grid item >
-          <CloseIcon/>
+            <IconButton onClick={handleClose}>
+            <CloseIcon/>
+            </IconButton>
+          
           </Grid>
         </Grid>
         <Divider style={{width: '100%',}} />
@@ -169,9 +172,8 @@ borderRadius: '10px'}} >Connect Wallet</Button>
           <Grid item>
         <Button mb={4} variant="outlined" style={{textDecoration: 'none',
                         color: '#000000',
-                        borderColor: '#000000',
-                        boxSizing: 'border-box',
-                      
+                        borderColor: '1px solid #CFD8DC',
+                        bordeRadius: '12px',
                         marginBottom: '20px',
                         alignItems: 'center',
                         textAlign: 'center'}}>
@@ -181,7 +183,8 @@ borderRadius: '10px'}} >Connect Wallet</Button>
           < Grid item>
           <Button variant="outlined" style={{textDecoration: 'none',
                         color: '#000000',
-                        borderColor: '#000000',
+                        borderColor: '1px solid #CFD8DC',
+                        bordeRadius: '12px',
                         marginBottom: '10px',
                         alignItems: 'center',
                         textAlign: 'center'}} >
