@@ -2,7 +2,9 @@ import React from 'react'
 import AppBar from '@mui/material/AppBar';
 import Drawer from '@mui/material/Drawer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Toolbar,Container,Box,Modal,Button,List,Divider,ListItem, Typography } from '@mui/material';
+import { Toolbar,Container,Box,Modal,Button,Grid,List,Divider,ListItem, Typography } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Link } from "react-router-dom";
 
 const theme = createTheme({
@@ -149,13 +151,45 @@ borderRadius: '10px'}} >Connect Wallet</Button>
 <Modal open={open}
         onClose={handleClose}>
       <Box sx={style}>
-        <Typography>
+        <Grid container mb={4} spacing={24} direction='row'>
+          <Grid item>
+          <Typography variant="h5">
           Connect Wallet
         </Typography>
-        <Divider />
-        <Typography>Choose your preferred wallet</Typography>
-        <Button>Metamask</Button>
-        <Button></Button>
+          </Grid>
+          <Grid item >
+          <CloseIcon/>
+          </Grid>
+        </Grid>
+        <Divider style={{width: '100%',}} />
+        
+        
+        <Typography mb={2} >Choose your preferred wallet</Typography>
+        <Grid Container spacing={20} direction='column'>
+          <Grid item>
+        <Button mb={4} variant="outlined" style={{textDecoration: 'none',
+                        color: '#000000',
+                        borderColor: '#000000',
+                        boxSizing: 'border-box',
+                      
+                        marginBottom: '20px',
+                        alignItems: 'center',
+                        textAlign: 'center'}}>
+          <img width='30' height='30' style={{marginRight: '20px'}} src='https://ik.imagekit.io/ugyodiq15/metamask_0ATceyyo2.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1674367657708' alt='MetaMask Icon' />
+          Metamask <Box alignItems={'center'} ml={26}><ArrowForwardIosIcon /></Box> </Button>
+          </Grid >
+          < Grid item>
+          <Button variant="outlined" style={{textDecoration: 'none',
+                        color: '#000000',
+                        borderColor: '#000000',
+                        marginBottom: '10px',
+                        alignItems: 'center',
+                        textAlign: 'center'}} >
+          <img width='30' height='30' style={{marginRight: '20px'}} src='https://ik.imagekit.io/ugyodiq15/Icon_HEVITp-J2d.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1674368576854' />
+          WalletConnect
+        <Box ml={20}><ArrowForwardIosIcon /></Box></Button>
+          </Grid>
+          </Grid>
       </Box>
 
 </Modal>
