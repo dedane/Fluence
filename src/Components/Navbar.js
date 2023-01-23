@@ -188,7 +188,7 @@ borderRadius: '10px'}} >Connect Wallet</Button>
                         marginBottom: '10px',
                         alignItems: 'center',
                         textAlign: 'center'}} >
-          <img width='30' height='30' style={{marginRight: '20px'}} src='https://ik.imagekit.io/ugyodiq15/Icon_HEVITp-J2d.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1674368576854' />
+          <img width='30' height='30' style={{marginRight: '20px'}} src='https://ik.imagekit.io/ugyodiq15/Icon_HEVITp-J2d.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1674368576854' alt='walletConnect' />
           WalletConnect
         <Box ml={20}><ArrowForwardIosIcon /></Box></Button>
           </Grid>
