@@ -17,12 +17,14 @@ function App() {
   })
   return (
     <ThemeProvider theme={theme} >
-    <Navbar />
+    
     <Routes>
+      <Navbar />
       <Route path='/' element={<Home />} ></Route>
       <Route path='/place' element={<Place />}></Route>
+      <Footer />
     </Routes>
-    <Footer /> 
+     
     </ThemeProvider>
   );
 }
