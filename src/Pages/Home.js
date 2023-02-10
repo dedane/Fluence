@@ -8,28 +8,17 @@ import {
       Card,
       Container,
       CardMedia,
-      
+      FormControl,
       CardContent,
       Rating } from '@mui/material'
     
-      //import { styled } from '@mui/material/styles';
 import { Box } from '@mui/system'
 import React from 'react'
-/* import StarIcon from '@mui/icons-material/Star';
-
-const StyledRating = styled(Rating)({
-  '& .MuiRating-iconFilled': {
-    color: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
-  },
-  '& .MuiRating-iconHover': {
-    color: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
-  },
-}); */
 
 function Home() {
   return (
     <Box height='100%'>
-      <Container Container spacing={3}>
+      <Container Container spacing={3} sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>
         <Grid container direction="row" height='100vh' justifyContent="center" alignItems="center">
       <Grid item xs={6} direction='row' >
         <Box mt={10}>
@@ -55,6 +44,57 @@ function Home() {
       </Grid>
       
       <Grid item xs={6} direction='row'  >
+        <img 
+              src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' 
+              style={{
+              width:'20',
+              height:'30' }}
+              alt='hero-house-images' />
+      </Grid>
+      </Grid>
+      </Container>
+      <Container  spacing={2} sx={{display: { xs: 'block', sm: 'block', md: 'none' }}}>
+        <Grid Container direction="column"  justifyContent="center" alignItems="center">
+      <Grid item xs={12} >
+        <Box mt={10}>
+              <Typography sx={{ 
+                display: 'block', 
+                fontSize: '45px', 
+                fontStyle: 'normal',
+                fontWeight: '400', 
+                letterSpacing: '-.02em',
+                width: 'fit-content'}} variant='h2'>Rent a <span style={{color: '#A02279'}} >place</span> away <br></br> from  <span style={{color: '#A02279'}}>Home</span> in the <span style={{color: '#A02279'}}>Metaverse</span></Typography>
+        </Box>
+        <Box mt={4} mb={4}> 
+                  <Typography variant='h6' display='block'>
+                    we provide you access to luxury and affordable
+                   houses in the  metaverse, get a chance to turn 
+                   your imagination to reality at your comfort zone
+                  </Typography>
+                  {/* <Box mt={5} mb={5} sx={{alignItems:'center', justifyContent:'center'}}>
+
+                    <FormControl >
+                        <TextField sx={{width: '1000'}}  label="search for location" />
+                    </FormControl>
+                    <Box>
+                      <Button sx={{ backgroundColor: '#A02279', width: '230px', height: '54px', align: 'center' }} variant="contained">Search</Button>
+                    </Box>
+                  </Box> */}
+                  <Box mt={4}>
+                  <Grid container>
+                    <Grid item xs={6}>
+                    <TextField   label="search for location" />
+                    </Grid>
+                    <Grid item xs={6}>
+                    <Button sx={{ backgroundColor: '#A02279', width: '230px', height: '54px', align: 'center' }} variant="contained">Search</Button> 
+                    </Grid>
+                  </Grid>
+                  </Box>
+                  
+        </Box>
+      </Grid>
+      
+      <Grid item xs={12} >
         <img 
               src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' 
               style={{
