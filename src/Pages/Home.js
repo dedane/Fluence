@@ -86,7 +86,7 @@ function Home() {
                     <TextField   label="search for location" />
                     </Grid>
                     <Grid item xs={6}>
-                    <Button sx={{ backgroundColor: '#A02279', width: '230px', height: '54px', align: 'center' }} variant="contained">Search</Button> 
+                    <Button sx={{ backgroundColor: '#A02279', width: '170px', height: '54px', align: 'center' }} variant="contained">Search</Button> 
                     </Grid>
                   </Grid>
                   </Box>
@@ -97,19 +97,19 @@ function Home() {
       <Grid item xs={12} >
         <img 
               src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' 
-              style={{
-              width:'20',
-              height:'30' }}
+              width='350'
+              height='350'
               alt='hero-house-images' />
       </Grid>
       </Grid>
       </Container>
        <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center'}} id='sponsors'  mb={5}> 
-          <Grid container 
+          <Grid 
+          container 
                 spacing={15} 
                 direction="row"
                 sx={{backgroundColor:'#A02279',
-                justifyContent:"space-evenly",
+                justifyContent:"space-around",
               alignItems:"center",
               height: '70px'
                 }}
@@ -138,7 +138,7 @@ function Home() {
                   Inspiration for your next adventure
                 </Typography>
             </Box>  
-            <Box height='100%' mb={10}>
+            <Box mb={10}>
                <Container > 
                
                 <Grid container
@@ -174,7 +174,7 @@ function Home() {
                           </Grid>
                           <Grid  item  xs={8}>
                             
-                            <Box mb={1}><Typography sx={{fontSize: '12px', fontWeight: '700'}}  >{meta.price}</Typography></Box>
+                            <Box mb={1}><Typography sx={{fontSize: '12px'}}  fontWeight='bold'>{meta.price}</Typography></Box>
                             <Box ><Typography sx={{fontSize: '12px'}} >{meta.availability}</Typography></Box>
                             
                           </Grid>
@@ -206,7 +206,7 @@ function Home() {
                       sx={{backgroundColor:'#A02279',
                       justifyContent:"space-evenly",
                       }}>
-                 <Container>                             
+                 <Container sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>                             
                 <Grid 
                 container
                 height='100vh'
@@ -230,6 +230,32 @@ function Home() {
                           justifyContent='center'
                               height= '500px' src="https://ik.imagekit.io/ugyodiq15/housing_r7HKiS5lh.png" alt='crib-art' />
                    </Grid>
+                    </Grid>
+                    </Container>
+                    <Container sx={{display: { xs: 'block', sm: 'block', md: 'none' }}}>                             
+                <Grid 
+                container
+                direction="Container"
+                justifyContent="center" 
+                alignItems="center">
+                   <Grid item mt={4} mb={2}>
+                          <img width= '300px'
+                          justifyContent='center'
+                              height= '300px' src="https://ik.imagekit.io/ugyodiq15/housing_r7HKiS5lh.png" alt='crib-art' />
+                   </Grid>
+                    <Grid item mb={5}>
+                        <Typography sx={{color: '#ffffff'}} mt={10} variant='h2'>
+                            Metabnb NFTs
+                        </Typography>
+                        <Typography sx={{color: '#ffffff'}} display='block' mt={5} mb={5}>
+                                Discover our NFT gift cards collection. 
+                                Loyal <br></br>customers gets amazing gift cards which are <br></br>traded as NFTs.
+                                These NFTs gives our cutomer <br></br>access to loads of our exclusive services.
+                        </Typography>
+                        <Button variant="contained"  sx={{ backgroundColor: '#FFFFFF', width: '230px', height: '54px', color: '#A02279' }}>Learn More</Button>
+                    </Grid>
+                    
+                   
                     </Grid>
                     </Container>
                   </Box>

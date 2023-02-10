@@ -53,13 +53,28 @@ function Navbar({to, label}) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+        
+          <ListItem disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} component={Link} to='/'>
+              <ListItemText primary='Home' />
             </ListItemButton>
           </ListItem>
-        ))}
+          <ListItem  disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} component={Link} to='Place'>
+              <ListItemText  primary='Place' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem  disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} component={Link} to='NFTS'>
+              <ListItemText component={Link} primary='NFTS' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem  disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} component={Link} to='COMMUNITY'>
+              <ListItemText component={Link} primary='COMMUNITY' />
+            </ListItemButton>
+          </ListItem>
+        
       </List>
       <Button   onClick={handleOpen} variant='contained'  sx={{background: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
 borderRadius: '10px'}} >Connect Wallet</Button>
