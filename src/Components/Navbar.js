@@ -2,9 +2,10 @@ import React from 'react'
 import AppBar from '@mui/material/AppBar';
 import Drawer from '@mui/material/Drawer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Toolbar,Container,IconButton, Box,Modal,Button,Grid,List,Divider,ListItem, Typography } from '@mui/material';
+import { Toolbar,Container,IconButton,ListItemText,ListItemButton, Box,Modal,Button,Grid,List,Divider,ListItem, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 
 const theme = createTheme({
@@ -33,7 +34,7 @@ const theme = createTheme({
   };
 
 function Navbar({to, label}) {
-
+  const drawerWidth = 300;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -43,63 +44,73 @@ function Navbar({to, label}) {
     setOpen(false);
   }
 
+  const navItems = ['HOME', 'PLACE TO STAY', 'NFTS', 'COMMUNITY']
+ 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
+      
       <List>
-       
-          <ListItem >
-          <Button  component={Link} style={{fontFamily: 'Red Rose',
-                                            fontStyle: 'normal',
-                                            alignItems: 'center',
-                                            textAlign: 'center',
-                                            fontWeight: '400',
-                                            fontSize: '17px',
-                                            lineHeight: '25px',
-                                            textDecoration:'none',
-                                            color: '#434343'}}
-                                            to='/'>Home</Button>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item} />
+            </ListItemButton>
           </ListItem>
-          <ListItem>
-          <Button component={Link} style={{fontFamily: 'Red Rose',
-                                            fontStyle: 'normal',
-                                            alignItems: 'center',
-                                            textAlign: 'center',
-                                            fontWeight: '400',
-                                            fontSize: '17px',
-                                            lineHeight: '25px',
-                                            textDecoration:'none',
-                                            color: '#434343'}}
-                                            to='/place'>Place to stay</Button>
-                            
-          </ListItem>
-          <ListItem>
-          <Button sx={{fontFamily: 'Red Rose',fontStyle: 'normal',
-                                            fontWeight: '400',
-                                            fontSize: '15px',
-                                            lineHeight: '25px',
-                                            color: '#434343'}}>NFTs</Button>
-          </ListItem>
-          <ListItem>
-          <Button sx={{fontFamily: 'Red Rose',fontStyle: 'normal',
-                                            fontWeight: '400',
-                                            fontSize: '15px',
-                                            lineHeight: '25px',
-                                            color: '#434343'}}> <Typography sx={{fontFamily: 'Red Rose'}}> Community</Typography></Button>
-          </ListItem>
-          <ListItem>
-          <Button   variant='contained'  sx={{background: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
-borderRadius: '10px'}} >Connect Wallet</Button>
-
-          </ListItem>
-        
+        ))}
       </List>
+      <Button   onClick={handleOpen} variant='contained'  sx={{background: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
+borderRadius: '10px'}} >Connect Wallet</Button>
+<Modal open={open}
+        onClose={handleClose}>
+      <Box sx={style}>
+        <Grid container mb={4} spacing={22} direction='row' alignItems='center' justifyContent='center'>
+          <Grid item>
+          <Typography variant="h5">
+          Connect Wallet
+        </Typography>
+          </Grid>
+          <Grid item >
+            <IconButton onClick={handleClose}>
+            <CloseIcon/>
+            </IconButton>
+          
+          </Grid>
+        </Grid>
+        <Divider style={{width: '100%',}} />
+        
+        
+        <Typography mb={2} >Choose your preferred wallet</Typography>
+        <Grid Container spacing={20} direction='column'>
+          <Grid item>
+        <Button mb={4} variant="outlined" style={{textDecoration: 'none',
+                        color: '#000000',
+                        borderColor: '1px solid #CFD8DC',
+                        bordeRadius: '12px',
+                        marginBottom: '20px',
+                        alignItems: 'center',
+                        textAlign: 'center'}}>
+          <img width='30' height='30' style={{marginRight: '20px'}} src='https://ik.imagekit.io/ugyodiq15/metamask_0ATceyyo2.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1674367657708' alt='MetaMask Icon' />
+          Metamask <Box alignItems={'center'} ml={26}><ArrowForwardIosIcon /></Box> </Button>
+          </Grid >
+          < Grid item>
+          <Button variant="outlined" style={{textDecoration: 'none',
+                        color: '#000000',
+                        borderColor: '1px solid #CFD8DC',
+                        bordeRadius: '12px',
+                        marginBottom: '10px',
+                        alignItems: 'center',
+                        textAlign: 'center'}} >
+          <img width='30' height='30' style={{marginRight: '20px'}} src='https://ik.imagekit.io/ugyodiq15/Icon_HEVITp-J2d.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1674368576854' alt='walletConnect' />
+          WalletConnect
+        <Box ml={20}><ArrowForwardIosIcon /></Box></Button>
+          </Grid>
+          </Grid>
+      </Box>
+
+</Modal>
     </Box>
   );
   
@@ -108,9 +119,23 @@ borderRadius: '10px'}} >Connect Wallet</Button>
         <AppBar sx={{  background: 'linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%)' }}>
             <Container>
                 <Toolbar>
-                    <img src='https://ik.imagekit.io/ugyodiq15/metabnb_logo_4dedweRgu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668218617798' alt='logo' />
+                <IconButton
+            
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
+                  <Box sx={{display: { xs: 'none', sm: 'none', md: 'block' }}} >
+                    <img  src='https://ik.imagekit.io/ugyodiq15/metabnb_logo_4dedweRgu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668218617798' alt='logo' />
+                    </Box>
+                    <Box ml={15} sx={{display: { xs: 'block', sm: 'block', md: 'none' },justifyContent:'center ', alignItems:'center'}}  >
+                    <img  src='https://ik.imagekit.io/ugyodiq15/Vector__1__1AZBCSvDZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668195337551' alt='logo' />
+                    </Box>
                     
-                    <Box ml={15} justifyContent='center' alignItems='center' sx={{display: { xs: 'none', sm: 'block' }}}>  
+                    <Box ml={15} justifyContent='center' alignItems='center' sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>  
                     <Button  component={Link} style={{fontFamily: 'Red Rose',
                                             fontStyle: 'normal',
                                             alignItems: 'center',
@@ -145,7 +170,7 @@ borderRadius: '10px'}} >Connect Wallet</Button>
                                             color: '#434343'}}> <Typography sx={{fontFamily: 'Red Rose'}}> Community</Typography></Button>
                             
                             </Box>      
-                    <Box ml={20}>
+                    <Box ml={20} sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>
                              <Button   onClick={handleOpen} variant='contained'  sx={{background: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
 borderRadius: '10px'}} >Connect Wallet</Button>
 <Modal open={open}
@@ -215,7 +240,8 @@ borderRadius: '10px'}} >Connect Wallet</Button>
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
+          }}rawer
+         
         >
           {drawer}
         </Drawer>
