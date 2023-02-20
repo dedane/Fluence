@@ -10,11 +10,21 @@ import {
       CardMedia,
       CardContent,
       Rating } from '@mui/material'
-    
+      import Slider from "react-slick";
 import { Box } from '@mui/system'
 import React from 'react'
 
 function Home() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear"
+  };
   return (
     <Box height='100%'>
       <Container Container spacing={3} sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>
@@ -102,9 +112,9 @@ function Home() {
       </Grid>
       </Grid>
       </Container>
-       <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center'}} id='sponsors'  mb={5}> 
+       <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center', display: { xs: 'none', sm: 'none', md: 'block'}}}  id='sponsors'  mb={5} > 
           <Grid 
-          container 
+                container 
                 spacing={15} 
                 direction="row"
                 sx={{backgroundColor:'#A02279',
@@ -113,6 +123,7 @@ function Home() {
               height: '70px'
                 }}
                 >   
+                <Slider {...settings}>
          <Grid >
             <Box  >
               <img src='https://ik.imagekit.io/ugyodiq15/mbtToken_AkI7nkRdf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101977' alt='MBT token'/>
@@ -128,7 +139,32 @@ function Home() {
               <img src='https://ik.imagekit.io/ugyodiq15/opensea_FX6HDDCZ6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101949' alt='open sea'/>
             </Box>
           </Grid>
+          </Slider>
           </Grid>
+        </Box>
+        <Box mt={20} sx={{justifyContent: 'center', alignItems: 'center'}} id='sponsors'>
+        <div 
+            container 
+            spacing={15} 
+            direction="row"
+            sx={{ backgroundColor:'#A02279',
+                  justifyContent:"space-around",
+                  alignItems:"center",
+                  height: '70px'
+                }}
+        > 
+                <Slider {...settings}>
+                  <div>
+                  <img src='https://ik.imagekit.io/ugyodiq15/mbtToken_AkI7nkRdf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101977' alt='MBT token'/>
+                  </div>
+                  <div>
+                  <img src='https://ik.imagekit.io/ugyodiq15/mbtToken_AkI7nkRdf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101977' alt='MBT token'/>
+                  </div>
+                  <div>
+                  <img src='https://ik.imagekit.io/ugyodiq15/mbtToken_AkI7nkRdf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101977' alt='MBT token'/>
+                  </div>
+                </Slider>
+                </div>
         </Box>
         <Box >
         
