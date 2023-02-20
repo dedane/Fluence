@@ -115,7 +115,7 @@ function Home() {
        <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center', display: { xs: 'none', sm: 'none', md: 'block'}}}  id='sponsors'  mb={5} > 
           <Grid 
                 container 
-                spacing={15} 
+                spacing={2} 
                 direction="row"
                 sx={{backgroundColor:'#A02279',
                 justifyContent:"space-around",
@@ -123,7 +123,7 @@ function Home() {
               height: '70px'
                 }}
                 >   
-                <Slider {...settings}>
+                
          <Grid >
             <Box  >
               <img src='https://ik.imagekit.io/ugyodiq15/mbtToken_AkI7nkRdf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101977' alt='MBT token'/>
@@ -139,10 +139,38 @@ function Home() {
               <img src='https://ik.imagekit.io/ugyodiq15/opensea_FX6HDDCZ6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101949' alt='open sea'/>
             </Box>
           </Grid>
-          </Slider>
+          
           </Grid>
         </Box>
-        <Box mt={20} sx={{justifyContent: 'center', alignItems: 'center'}} id='sponsors'>
+        <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center', display: { xs: 'block', sm: 'none', md: 'none'}}}  id='sponsors'  mb={5} > 
+          <Grid 
+                container 
+                spacing={2} 
+                direction="column"
+                sx={{backgroundColor:'#A02279',
+                justifyContent:"space-around",
+              alignItems:"center",
+              height: '180px'
+                }}
+                >   
+                
+         
+            <Box  >
+              <img src='https://ik.imagekit.io/ugyodiq15/mbtToken_AkI7nkRdf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101977' alt='MBT token'/>
+            </Box>
+         
+                  <Box >
+                    <img src='https://ik.imagekit.io/ugyodiq15/metamask_yLTSCpwZE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101953' alt='Metamask'/>
+                  </Box>  
+            
+            <Box>
+              <img src='https://ik.imagekit.io/ugyodiq15/opensea_FX6HDDCZ6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668619101949' alt='open sea'/>
+            </Box>
+        
+          
+          </Grid>
+        </Box>
+        {/* <Box mt={20} sx={{justifyContent: 'center', alignItems: 'center'}} id='sponsors'>
         <div 
             container 
             spacing={15} 
@@ -165,7 +193,7 @@ function Home() {
                   </div>
                 </Slider>
                 </div>
-        </Box>
+        </Box> */}
         <Box >
         
             <Box justifyContent="center" alignItems="center">
@@ -273,7 +301,7 @@ function Home() {
                 direction="Container"
                 justifyContent="center" 
                 alignItems="center">
-                   <Grid item mt={4} mb={2}>
+                   <Grid item mt={4} mb={2} mr={5}>
                           <img width= '300px'
                           justifyContent='center'
                               height= '300px' src="https://ik.imagekit.io/ugyodiq15/housing_r7HKiS5lh.png" alt='crib-art' />
