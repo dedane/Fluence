@@ -146,8 +146,8 @@ borderRadius: '10px'}} >Connect Wallet</Button>
                   <Box sx={{display: { xs: 'none', sm: 'none', md: 'block' }}} >
                     <img  src='https://ik.imagekit.io/ugyodiq15/metabnb_logo_4dedweRgu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668218617798' alt='logo' />
                     </Box>
-                    <Box ml={15} sx={{display: { xs: 'block', sm: 'block', md: 'none' },justifyContent:'center ', alignItems:'center'}}  >
-                    <img  src='https://ik.imagekit.io/ugyodiq15/Vector__1__1AZBCSvDZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668195337551' alt='logo' />
+                    <Box ml={10} sx={{display: { xs: 'block', sm: 'block', md: 'none' },justifyContent:'center ', alignItems:'center'}}  >
+                    <img sx={{ width: 200, height: 200 }}  src='https://ik.imagekit.io/ugyodiq15/Vector__1__1AZBCSvDZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668195337551' alt='logo' />
                     </Box>
                     
                     <Box ml={15} justifyContent='center' alignItems='center' sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>  
