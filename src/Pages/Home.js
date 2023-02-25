@@ -102,14 +102,15 @@ function Home() {
                   
         </Box>
       </Grid>
-      
+      <Box sx ={{justifyContent: 'center', alignItems: 'center'}}>
       <Grid item xs={12} >
         <img 
               src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' 
-              width='350'
+              width='300'
               height='350'
               alt='hero-house-images' />
       </Grid>
+      </Box>
       </Grid>
       </Container>
        <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center', display: { xs: 'none', sm: 'none', md: 'block'}}}  id='sponsors'  mb={5} > 
