@@ -34,6 +34,7 @@ const theme = createTheme({
   };
 
 function Navbar({to, label}) {
+  
   const drawerWidth = 300;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [open, setOpen] = React.useState(false);
@@ -100,10 +101,9 @@ borderRadius: '10px'}} >Connect Wallet</Button>
         <Typography mb={2} >Choose your preferred wallet</Typography>
         <Grid Container spacing={20} direction='column'>
           <Grid item>
-        <Button mb={4} variant="outlined" style={{textDecoration: 'none',
+        <Button variant="outlined" style={{textDecoration: 'none',
                         color: '#000000',
                         borderColor: '1px solid #CFD8DC',
-                        bordeRadius: '12px',
                         marginBottom: '20px',
                         alignItems: 'center',
                         textAlign: 'center'}}>
@@ -114,7 +114,6 @@ borderRadius: '10px'}} >Connect Wallet</Button>
           <Button variant="outlined" style={{textDecoration: 'none',
                         color: '#000000',
                         borderColor: '1px solid #CFD8DC',
-                        bordeRadius: '12px',
                         marginBottom: '10px',
                         alignItems: 'center',
                         textAlign: 'center'}} >
