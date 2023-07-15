@@ -143,13 +143,15 @@ borderRadius: '10px'}} >Connect Wallet</Button>
             <MenuIcon />
           </IconButton>
                   <Box sx={{display: { xs: 'none', sm: 'none', md: 'block' }}} >
-                    <img  src='https://ik.imagekit.io/ugyodiq15/metabnb_logo_4dedweRgu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668218617798' alt='logo' />
+                    {/* <img  src='https://ik.imagekit.io/ugyodiq15/metabnb_logo_4dedweRgu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668218617798' alt='logo' /> */}
+                      <Typography variant='h5' sx={{color: '#434343'}}>AfriFluence</Typography>
                     </Box>
-                    <Box ml={10} sx={{display: { xs: 'block', sm: 'block', md: 'none' },justifyContent:'center ', alignItems:'center'}}  >
-                    <img sx={{ width: 200, height: 200 }}  src='https://ik.imagekit.io/ugyodiq15/Vector__1__1AZBCSvDZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668195337551' alt='logo' />
+                    <Box  sx={{display: { xs: 'block', sm: 'block', md: 'none' },justifyContent:'center ', alignItems:'center'}}  >
+                    {/* <img sx={{ width: 200, height: 200 }}  src='https://ik.imagekit.io/ugyodiq15/Vector__1__1AZBCSvDZ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668195337551' alt='logo' /> */}
+                      
                     </Box>
-                    
-                    <Box ml={15} justifyContent='center' alignItems='center' sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>  
+                    <Typography sx={{color: '#fffff'}}>AfriFluence</Typography>
+                    <Box  mr={10} justifyContent='center' alignItems='center' sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>  
                     <Button  component={Link} style={{fontFamily: 'Red Rose',
                                             fontStyle: 'normal',
                                             alignItems: 'center',
@@ -159,7 +161,7 @@ borderRadius: '10px'}} >Connect Wallet</Button>
                                             lineHeight: '25px',
                                             textDecoration:'none',
                                             color: '#434343'}}
-                                            to='/'>Home</Button>
+                                            to='/'>Explore</Button>
                             <Button component={Link} style={{fontFamily: 'Red Rose',
                                             fontStyle: 'normal',
                                             alignItems: 'center',
@@ -169,31 +171,35 @@ borderRadius: '10px'}} >Connect Wallet</Button>
                                             lineHeight: '25px',
                                             textDecoration:'none',
                                             color: '#434343'}}
-                                            to='/place'>Place to stay</Button>
+                                            to='/place'>How It works</Button>
                             
-                            <Button sx={{fontFamily: 'Red Rose',fontStyle: 'normal',
+                            <Button style={{fontFamily: 'Red Rose',
+                                            fontStyle: 'normal',
+                                            alignItems: 'center',
+                                            textAlign: 'center',
+                                            fontWeight: '400',
+                                            fontSize: '17px',
+                                            lineHeight: '25px',
+                                            textDecoration:'none',
+                                            color: '#434343'}}>Resources</Button>
+                            
+                           {/*  <Button sx={{fontFamily: 'Red Rose',fontStyle: 'normal',
                                             fontWeight: '400',
                                             fontSize: '15px',
                                             lineHeight: '25px',
-                                            color: '#434343'}}>NFTs</Button>
-                            
-                            <Button sx={{fontFamily: 'Red Rose',fontStyle: 'normal',
-                                            fontWeight: '400',
-                                            fontSize: '15px',
-                                            lineHeight: '25px',
-                                            color: '#434343'}}> <Typography sx={{fontFamily: 'Red Rose'}}> Community</Typography></Button>
+                                            color: '#434343'}}> <Typography sx={{fontFamily: 'Red Rose'}}> Community</Typography></Button> */}
                             
                             </Box>      
-                    <Box ml={20} sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>
-                             <Button   onClick={handleOpen} variant='contained'  sx={{background: 'linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)',
-borderRadius: '10px'}} >Connect Wallet</Button>
+                    <Box  sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>
+                             <Button   onClick={handleOpen} variant='contained'  sx={{background: '#59b70f99'}} >Join As Brand</Button>
+                             
 <Modal open={open}
         onClose={handleClose}>
       <Box sx={style}>
         <Grid container mb={4} spacing={22} direction='row' alignItems='center' justifyContent='center'>
           <Grid item>
           <Typography variant="h5">
-          Connect Wallet
+          Join As Brand
         </Typography>
           </Grid>
           <Grid item >
@@ -236,8 +242,9 @@ borderRadius: '10px'}} >Connect Wallet</Button>
 
 </Modal>
                     </Box>
-                    
-                        
+                    <Box ml={5}>
+                    <Button    variant='outlined'  sx={{borderColor: '#59b70f', color: '#377407'}} >Join As A Influencer</Button>
+                    </Box>     
                     
                 </Toolbar>
             </Container>

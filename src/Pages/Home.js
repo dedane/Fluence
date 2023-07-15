@@ -12,6 +12,10 @@ import {
       Rating } from '@mui/material'
       import Slider from "react-slick";
 import { Box } from '@mui/system'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { ArrowForward } from '@mui/icons-material';
 import React from 'react'
 
 function Home() {
@@ -31,34 +35,48 @@ function Home() {
         <Grid container direction="row" height='100vh' justifyContent="center" alignItems="center">
       <Grid item xs={6} direction='row' >
         <Box mt={10}>
-              <Typography sx={{ 
-                display: 'block', 
-                fontSize: '45px', 
-                fontStyle: 'normal',
-                fontWeight: '400', 
-                letterSpacing: '-.02em',
-                width: 'fit-content'}} variant='h2'>Rent a <span style={{color: '#A02279'}} >place</span> away <br></br> from  <span style={{color: '#A02279'}}>Home</span> in the <span style={{color: '#A02279'}}>Metaverse</span></Typography>
+        <Typography variant="h2" className="find-hire-the">
+              <span className="text-wrapper">
+                Find &amp; Hire the Perfect
+                <br />
+              </span>
+              <span style={{color: '#59b70f'}}>influencer</span>
+              <span className="text-wrapper">
+                {" "}
+                for <br />
+                your{" "}
+              </span>
+              <span style={{color: '#116fde'}}>Brand</span>
+            </Typography>
         </Box>
         <Box mt={4}> 
                   <Typography variant='h6' display='block'>
-                    we provide you access to luxury and affordable
-                   houses in the  metaverse, get a chance to turn 
-                   your imagination to reality at your comfort zone
+                  Leverage power of creators to make your brand stand out
                   </Typography>
-                  <Box mt={5} mb={5}>
-                  <TextField sx={{width: '500'}}  label="search for location" />
-                  <Button mt={10} sx={{ backgroundColor: '#A02279', width: '230px', height: '54px' }} variant="contained">Search</Button>
+                  <Box mt={10}>
+                  <Grid container direction='row'>
+                    <Grid item>
+                  <Box  >
+                  <Button mt={10} variant="contained">Join As A brand</Button>
+                  </Box>
+                  </Grid>
+                  <Grid item>
+                  <Box ml={10}>
+                  <Button mt={10}  sx={{borderColor: '#59b70f', color: '#377407'}} variant="outlined">Join As A Creator</Button>
+                  </Box>
+                  </Grid>
+                  </Grid>
                   </Box>
         </Box>
       </Grid>
       
-      <Grid item xs={6} direction='row'  >
+      <Grid item xs={6} direction='row' style={{marginTop: '30'}} >
         <img 
-              src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' 
+              src='https://ik.imagekit.io/ugyodiq15/Group_14_PwBfPnAa_.png?updatedAt=1689320570244' 
               style={{
               width:'20',
               height:'30' }}
-              alt='hero-house-images' />
+              alt='Influencers' />
       </Grid>
       </Grid>
       </Container>
@@ -66,19 +84,23 @@ function Home() {
         <Grid Container direction="column"  justifyContent="center" alignItems="center">
       <Grid item xs={12} >
         <Box mt={10}>
-              <Typography sx={{ 
-                display: 'block', 
-                fontSize: '45px', 
-                fontStyle: 'normal',
-                fontWeight: '400', 
-                letterSpacing: '-.02em',
-                width: 'fit-content'}} variant='h2'>Rent a <span style={{color: '#A02279'}} >place</span> away <br></br> from  <span style={{color: '#A02279'}}>Home</span> in the <span style={{color: '#A02279'}}>Metaverse</span></Typography>
+        <Typography className="find-hire-the">
+              <span className="text-wrapper">
+                Find &amp; Hire the Perfect
+                <br />
+              </span>
+              <span sx={{color: '#59b70f'}}>influencer</span>
+              <span className="text-wrapper">
+                {" "}
+                for <br />
+                your{" "}
+              </span>
+              <span sx={{color: '#116fde'}}>Brand</span>
+            </Typography>
         </Box>
         <Box mt={4} mb={4}> 
                   <Typography variant='h6' display='block'>
-                    we provide you access to luxury and affordable
-                   houses in the  metaverse, get a chance to turn 
-                   your imagination to reality at your comfort zone
+                  Leverage power of creators to make your brand stand out
                   </Typography>
                   {/* <Box mt={5} mb={5} sx={{alignItems:'center', justifyContent:'center'}}>
 
@@ -92,17 +114,17 @@ function Home() {
                   <Box mt={4}>
                   <Grid container>
                     <Grid item xs={6}>
-                    <TextField   label="search for location" />
+                    <Button sx={{ backgroundColor: '#A02279', width: '170px', height: '54px', align: 'center' }} variant="contained">Join As Brand</Button>
                     </Grid>
                     <Grid item xs={6}>
-                    <Button sx={{ backgroundColor: '#A02279', width: '170px', height: '54px', align: 'center' }} variant="contained">Search</Button> 
+                    <Button sx={{ backgroundColor: '#A02279', width: '170px', height: '54px', align: 'center' }} variant="contained">Join As Creator</Button> 
                     </Grid>
                   </Grid>
                   </Box>
                   
         </Box>
       </Grid>
-      <Box sx ={{justifyContent: 'center', alignItems: 'center'}}>
+      <Box >
       <Grid item xs={12} >
         <img 
               src='https://ik.imagekit.io/ugyodiq15/Group_4028_Tc_lJDmE2.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668597433140' 
@@ -113,7 +135,7 @@ function Home() {
       </Box>
       </Grid>
       </Container>
-       <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center', display: { xs: 'none', sm: 'none', md: 'block'}}}  id='sponsors'  mb={5} > 
+       {/* <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center', display: { xs: 'none', sm: 'none', md: 'block'}}}  id='sponsors'  mb={5} > 
           <Grid 
                 container 
                 spacing={2} 
@@ -142,7 +164,7 @@ function Home() {
           </Grid>
           
           </Grid>
-        </Box>
+        </Box> */}
         <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center', display: { xs: 'block', sm: 'none', md: 'none'}}}  id='sponsors'  mb={5} > 
           <Grid 
                 container 
@@ -195,11 +217,11 @@ function Home() {
                 </Slider>
                 </div>
         </Box> */}
-        <Box >
+        <Box mt={16} >
         
             <Box justifyContent="center" alignItems="center">
               <Typography variant='h3' mb={5} align='center' >
-                  Inspiration for your next adventure
+                  Find Your Perfect Influencer
                 </Typography>
             </Box>  
             <Box mb={10}>
@@ -214,7 +236,7 @@ function Home() {
                   >
                     
                     {metaHome.map((meta)  => (
-                      <Grid item xs={12} sm={6} md={4} lg={3} xl={3}>
+                      <Grid item xs={12} sm={12} md={8} lg={4} xl={4}>
                       <Card variant="outlined" sx={{bordeRadius: '15px',
                                                     width: '292px',
                                                     height: '372px',
@@ -227,22 +249,29 @@ function Home() {
                               height= '265px' src={meta.img} alt='1' />
                         </CardMedia>
                         <CardContent>
-                        <Grid container   spacing={2} >
-                          <Grid item  xs={4}>
+                        <Box container   spacing={2} >
+                         
                             
-                            <Box mb={1}><Typography sx={{fontSize: '12px'}} >{meta.name}</Typography></Box>
-                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.distance}</Typography></Box>
-                            <Box  mt={1} sx={{justifyContent: 'space-between'}}>
-                            <Rating size='small' mx='auto' name="meta-ratings" defaultValue={5}/>
-                          </Box>
-                          </Grid>
-                          <Grid  item  xs={8}>
+                            <Box mb={1}>
+                              <Typography variant='h5'  >{meta.name}</Typography>
+                              </Box>
                             
-                            <Box mb={1}><Typography sx={{fontSize: '12px'}}  fontWeight='bold'>{meta.price}</Typography></Box>
-                            <Box ><Typography sx={{fontSize: '12px'}} >{meta.availability}</Typography></Box>
+      
+                            <Grid container direction="row" alignItems="center" spacing={4}>
+                              <Grid item>
+                                <FacebookIcon />
+                              </Grid>
+                              <Grid item>
+                                <TwitterIcon />
+                              </Grid>
+                              <Grid item>
+                                <InstagramIcon />
+                              </Grid>
+                              
+                            </Grid>
                             
-                          </Grid>
-                          </Grid> 
+                          
+                          </Box> 
                           
                           
                         </CardContent>
@@ -264,9 +293,17 @@ function Home() {
                 
                 </Container>  
                 </Box>  
-
                 
-                  <Box  
+                <Box mt={16} >
+        
+            <Box justifyContent="center" alignItems="center">
+              <Typography variant='h3' mb={5} align='center' >
+                  How We Work
+                </Typography>
+            </Box> 
+            </Box>
+                
+                  {/* <Box  
                       sx={{backgroundColor:'#A02279',
                       justifyContent:"space-evenly",
                       }}>
@@ -322,7 +359,7 @@ function Home() {
                    
                     </Grid>
                     </Container>
-                  </Box>
+                  </Box> */}
                 
         </Box>
       
@@ -332,69 +369,41 @@ function Home() {
 
 const metaHome = [
   {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151_GcpJiNw23.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277583',
+    img: 'https://ik.imagekit.io/ugyodiq15/Rectangle_15_BA_mQAAwA.png?updatedAt=1689419138336',
     title: 1,
-    name:'Desert King',
-    price: '1MBT per night',
-    distance: '2345k away',
-    availability: 'available for 2 weeks stay'
+    name:'Elaine Makena',
+   
   },
   {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__1__Sz06JdePTO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277556',
-    name:'Desert King',
+    img: 'https://ik.imagekit.io/ugyodiq15/Rectangle_11_DTRjInimA.png?updatedAt=1689419138343',
+    name:'Flora Maina',
     title: 2,
-    price: '1MBT per night',
-    distance: '2345k away',
-    availability: 'available for 2 weeks stay'
   },
   { 
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__2__FOX9ChLJm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277555',
-    name:'Desert King',
+    img: 'https://ik.imagekit.io/ugyodiq15/Rectangle_6_tJgsv99XL.png?updatedAt=1689320410163',
+    name:'Pablo Escobar',
     title: 3,
-    price: '1MBT per night',
-    distance: '2345k away',
-    availability: 'available for 2 weeks stay'
+    
   },
   {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__3__RWHOeAhCC.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625277552',
-    name:'Desert King',
+    img: 'https://ik.imagekit.io/ugyodiq15/Rectangle_14_bwajH5aXSR.png?updatedAt=1689419138315',
+    name:'Susan Mwikali',
     title: 4,
-    price: '1MBT per night',
-    distance: '2345k away',
-    availability: 'available for 2 weeks stay'
+    
   },
   { 
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__4__ZzayBQGcR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625329018',
-    name:'Desert King',
+    img: 'https://ik.imagekit.io/ugyodiq15/Rectangle_4_QPM7ITcAZx.png?updatedAt=1689320410336',
+    name:'Sharon Ndulu',
     title: 5,
-    price: '1MBT per night',
-    distance: '2345k away',
-    availability: 'available for 2 weeks stay'
+    
   },
   {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__5__JuF3zRIWT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625329008',
-    name:'Desert King',
+    img: 'https://ik.imagekit.io/ugyodiq15/Rectangle_13_jyKxqJsdr.png?updatedAt=1689419138302',
+    name:'Loise Keen',
     title: 6,
-    price: '1MBT per night',
-    distance: '2345k away',
-    availability: 'available for 2 weeks stay'
+   
   },
-  { 
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__6__9rIS7oh5cf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625329015',
-    name:'Desert King',
-    title: 7,
-    price: '1MBT per night',
-    distance: '2345k away',
-    availability: 'available for 2 weeks stay'
-  },
-  {
-    img: 'https://ik.imagekit.io/ugyodiq15/Frame_151__7__hR1hzXlEC.png?ik-sdk-version=javascript-1.4.3&updatedAt=1668625329269',
-    name:'Desert King',
-    title: 8,
-    price: '1MBT per night',
-    distance: '2345k away',
-    availability: 'available for 2 weeks stay'
-  },
+  
 ]
 
 export default Home
