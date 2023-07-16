@@ -4,6 +4,7 @@ import {
       Typography, 
       TextField,
       Button,
+      Avatar,
       Grid,
       Card,
       Container,
@@ -16,6 +17,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { ArrowForward } from '@mui/icons-material';
+import { FiUserPlus,FiUsers,FiUserCheck,FiZoomIn } from 'react-icons/fi'
 import React from 'react'
 
 function Home() {
@@ -300,6 +302,111 @@ function Home() {
               <Typography variant='h3' mb={5} align='center' >
                   How We Work
                 </Typography>
+                <Box mt={14}>
+                <Grid container spacing={8}
+                direction="row"
+                justifyContent="center" 
+                alignItems="center">
+                  <grid item xs={12} sm={12} md={8} lg={4} xl={4}>
+                    <Card>
+                      <CardContent>
+                      <Box align='center' justify='center'>
+                        <Box>
+                            <Avatar sx={{ width: 56, height: 56, bgcolor: '#59b70f',  }}>
+                              <FiUserPlus />
+                            </Avatar>
+                        </Box>  
+                        <Box mt={5}>
+                              <Typography variant='h5'>
+                                Create Account
+                              </Typography>
+                              </Box>
+                              <Box mt={4}>
+                                <Typography>
+                                  Register with your<br/>
+                                  details to initialize
+                                  process
+                                </Typography>
+                              </Box>
+                            </Box>
+                      </CardContent>
+                    </Card>
+                  </grid>
+                  <grid item xs={12} sm={12} md={8} lg={4} xl={4}>
+                    <Card>
+                      <CardContent>
+                      <Box align='center' justify='center'>
+                        <Box>
+                            <Avatar sx={{ width: 56, height: 56, bgcolor: '#1270DE',  }}>
+                              <FiUserCheck />
+                            </Avatar>
+                        </Box>  
+                        <Box mt={5}>
+                              <Typography variant='h5'>
+                                Complete Profile
+                              </Typography>
+                              </Box>
+                              <Box mt={4}>
+                                <Typography>
+                                  Fill in your<br/>
+                                  profile data
+                                </Typography>
+                              </Box>
+                            </Box>
+                      </CardContent>
+                    </Card>
+                  </grid>
+                  <grid item xs={12} sm={12} md={8} lg={4} xl={4}>
+                    <Card>
+                      <CardContent>
+                      <Box align='center' justify='center'>
+                        <Box>
+                            <Avatar sx={{ width: 56, height: 56, bgcolor: '#900CBE',  }}>
+                              <FiZoomIn />
+                            </Avatar>
+                        </Box>  
+                        <Box mt={5}>
+                              <Typography variant='h5'>
+                                Find Each Other
+                              </Typography>
+                              </Box>
+                              <Box mt={4}>
+                                <Typography>
+                                  Find the best influencer<br/>
+                                  for your brand
+                                </Typography>
+                              </Box>
+                            </Box>
+                      </CardContent>
+                    </Card>
+                  </grid>
+                  <grid item xs={12} sm={12} md={8} lg={4} xl={4}>
+                    <Card>
+                      <CardContent>
+                      <Box align='center' justify='center'>
+                        <Box>
+                            <Avatar sx={{ width: 56, height: 56, bgcolor: '#C90F0F',  }}>
+                              <FiUsers />
+                            </Avatar>
+                        </Box>  
+                        <Box mt={5}>
+                              <Typography variant='h5'>
+                                Collaborate
+                              </Typography>
+                              </Box>
+                              <Box mt={4}>
+                                <Typography>
+                                  Strike a deal<br/> and Work
+                                  together
+                                </Typography>
+                              </Box>
+                            </Box>
+                      </CardContent>
+                    </Card>
+                  </grid>
+                  
+                </Grid>
+                </Box>
             </Box> 
             </Box>
                 

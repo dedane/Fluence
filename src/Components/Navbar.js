@@ -191,56 +191,9 @@ borderRadius: '10px'}} >Connect Wallet</Button>
                             
                             </Box>      
                     <Box  sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>
-                             <Button   onClick={handleOpen} variant='contained'  sx={{background: '#59b70f99'}} >Join As Brand</Button>
+                             <Button    variant='contained'  sx={{background: '#59b70f99'}} component={Link} to='SignIn'>Join As Brand</Button>
                              
-<Modal open={open}
-        onClose={handleClose}>
-      <Box sx={style}>
-        <Grid container mb={4} spacing={22} direction='row' alignItems='center' justifyContent='center'>
-          <Grid item>
-          <Typography variant="h5">
-          Join As Brand
-        </Typography>
-          </Grid>
-          <Grid item >
-            <IconButton onClick={handleClose}>
-            <CloseIcon/>
-            </IconButton>
-          
-          </Grid>
-        </Grid>
-        <Divider style={{width: '100%',}} />
-        
-        
-        <Typography mb={2} >Choose your preferred wallet</Typography>
-        <Grid Container spacing={20} direction='column'>
-          <Grid item>
-        <Button mb={4} variant="outlined" style={{textDecoration: 'none',
-                        color: '#000000',
-                        borderColor: '1px solid #CFD8DC',
-                        bordeRadius: '12px',
-                        marginBottom: '20px',
-                        alignItems: 'center',
-                        textAlign: 'center'}}>
-          <img width='30' height='30' style={{marginRight: '20px'}} src='https://ik.imagekit.io/ugyodiq15/metamask_0ATceyyo2.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1674367657708' alt='MetaMask Icon' />
-          Metamask <Box alignItems={'center'} ml={26}><ArrowForwardIosIcon /></Box> </Button>
-          </Grid >
-          < Grid item>
-          <Button variant="outlined" style={{textDecoration: 'none',
-                        color: '#000000',
-                        borderColor: '1px solid #CFD8DC',
-                        bordeRadius: '12px',
-                        marginBottom: '10px',
-                        alignItems: 'center',
-                        textAlign: 'center'}} >
-          <img width='30' height='30' style={{marginRight: '20px'}} src='https://ik.imagekit.io/ugyodiq15/Icon_HEVITp-J2d.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1674368576854' alt='walletConnect' />
-          WalletConnect
-        <Box ml={20}><ArrowForwardIosIcon /></Box></Button>
-          </Grid>
-          </Grid>
-      </Box>
 
-</Modal>
                     </Box>
                     <Box ml={5}>
                     <Button    variant='outlined'  sx={{borderColor: '#59b70f', color: '#377407'}} >Join As A Influencer</Button>
