@@ -44,26 +44,30 @@ export default function SignIn() {
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
+            backgroundSize: 'cover ',
             backgroundPosition: 'center',
           }}
-        />
+        >
+            
+        </Grid>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
-              my: 8,
-              mx: 4,
+              my: 18,
+              mx: 8,
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
+              
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <LockOutlinedIcon />
-            </Avatar>
-            <Typography component="h1" variant="h5">
-              Sign in
-            </Typography>
+           <Box justify='start' align='start'>
+              <Typography component="h1" variant="h5">
+                Welcome
+              </Typography>
+              <Typography component="h1" variant="h5">
+                Create a new account
+              </Typography>
+            </Box>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"

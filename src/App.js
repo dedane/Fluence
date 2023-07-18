@@ -6,6 +6,8 @@ import { Routes, Route  } from "react-router-dom";
 import Home from '../src/Pages/Home'
 import SignIn from '../src/Pages/SignIn'
 import SignUp from '../src/Pages/SignUp'
+import BrandSignIn from '../src/Pages/BrandSignIn'
+import BrandSignUp from '../src/Pages/BrandSignUp'
 
 function App() {
   const theme = createTheme({
@@ -26,6 +28,8 @@ function App() {
       <Route path='/' element={<Home />} ></Route>
       <Route path='/SignIn' element={<SignIn />}></Route>
       <Route path='/SignUp' element={<SignUp />}></Route>
+      <Route path='/BrandSignUp' element={<BrandSignUp />}></Route>
+      <Route path='/BrandSignIn' element={<BrandSignIn />}></Route>
     </Routes>
     
     
