@@ -32,7 +32,7 @@ function Home() {
     cssEase: "linear"
   };
   return (
-    <Box height='100%'>
+    <Box height='100%'    >
       <Container Container spacing={3} sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>
         <Grid container direction="row" height='100vh' justifyContent="center" alignItems="center">
       <Grid item xs={6} direction='row' >
