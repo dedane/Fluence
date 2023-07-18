@@ -104,7 +104,7 @@ export default function SignIn() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Typography href="#" variant="body2" component={Link} to='SignUp'>
+                  <Typography href="#" variant="body2" component={Link} to='/SignUp'>
                    SignUp
                   </Typography>
                 </Grid>

@@ -303,11 +303,11 @@ function Home() {
                   How We Work
                 </Typography>
                 <Box mt={14}>
-                <Grid container spacing={8}
+                <Grid container spacing={4}
                 direction="row"
                 justifyContent="center" 
                 alignItems="center">
-                  <grid item xs={12} sm={12} md={8} lg={4} xl={4}>
+                  <grid item xs={12}  sm={12} md={8} lg={4} xl={4}>
                     <Card>
                       <CardContent>
                       <Box align='center' justify='center'>
