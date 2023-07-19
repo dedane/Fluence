@@ -1,11 +1,17 @@
 import React from 'react'
-import { Grid,Box,Container,Typography, Stack } from '@mui/material'
+import { Grid,Box,Container,Typography, Stack, AppBar } from '@mui/material'
 import { FaFacebookF,FaInstagram,FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
    
-    <Box  >
+    <AppBar
+    position="static"
+    color="primary"
+    sx={{
+      top: 'auto',
+      bottom: 0,
+    }}  >
       
     
       <Box component="footer" 
@@ -65,7 +71,7 @@ function Footer() {
         </Grid>
         </Container>
         </Box>
-    </Box>
+    </AppBar>
    
   )
 }
