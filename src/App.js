@@ -10,6 +10,7 @@ import BrandSignIn from '../src/Pages/BrandSignIn'
 import BrandSignUp from '../src/Pages/BrandSignUp'
 import InfluencerLanding from './Pages/Influencer/InfluencerLanding';
 import InfluencerSocials from './Pages/Influencer/InfluencerSocials';
+import InfluencerProfile from './Pages/Influencer/InfluencerProfile';
 
 function App() {
   const theme = createTheme({
@@ -34,6 +35,7 @@ function App() {
       <Route path='/BrandSignIn' element={<BrandSignIn />}></Route>
       <Route path='Influencer/InfluencerLanding' element={<InfluencerLanding />}></Route>
       <Route path='Influencer/InfluencerSocials' element={<InfluencerSocials />}></Route>
+      <Route path='Influencer/InfluencerProfile' element={<InfluencerProfile />}></Route>
     </Routes>
     
     
