@@ -1,4 +1,4 @@
-import { Container,Box,Grid,Typography,Card, CardMedia, CardContent, IconButton } from '@mui/material'
+import { Container,Box,Grid,Typography,Card, CardMedia, CardContent, Button, IconButton } from '@mui/material'
 import { FiTwitter,FiLinkedin,FiInstagram,FiFacebook } from "react-icons/fi";
 import React from 'react'
 
@@ -149,6 +149,20 @@ function InfluencerLanding() {
           </Grid>
           </Box>
         </Card>
+      </Box>
+      <Box mt={10} mb={10}>
+      <Grid  container spacing={4} sx={{ display: 'flex', flexDirection: 'row',  alignItems:'center', justifyContent:'center'}}>
+        <Grid item>
+        <Button  variant='contained' size='large' sx={{ width: 500, background:'#1270DE' }}>
+            Accept Offer
+        </Button>
+        </Grid>
+        <Grid item>
+        <Button variant='contained' size='large'  sx={{ width: 500, background:'#C30F0F' }}>
+            Deny Offer
+        </Button>
+        </Grid>
+      </Grid>
       </Box>
       </Container>
     </Box>
