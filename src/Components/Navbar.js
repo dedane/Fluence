@@ -130,7 +130,7 @@ borderRadius: '10px'}} >Connect Wallet</Button>
   
   return (
     <ThemeProvider theme={theme}>
-        <AppBar sx={{  background: 'linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%)' }}>
+        <AppBar position="static" sx={{  background: 'linear-gradient(124.4deg, #FFFFFF 10.8%, #FFFFFF 87.34%)' }}>
             <Container>
                 <Toolbar>
                 <IconButton

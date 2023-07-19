@@ -153,9 +153,7 @@ function InfluencerLanding() {
       <Box mt={10} mb={10}>
       <Grid  container spacing={4} sx={{ display: 'flex', flexDirection: 'row',  alignItems:'center', justifyContent:'center'}}>
         <Grid item>
-        <Button  variant='contained' size='large' sx={{ width: 500, background:'#1270DE' }}>
-            Accept Offer
-        </Button>
+        LinkedIn
         </Grid>
         <Grid item>
         <Button variant='contained' size='large'  sx={{ width: 500, background:'#C30F0F' }}>
