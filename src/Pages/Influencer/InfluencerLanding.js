@@ -1,4 +1,5 @@
-import { Container,Box,Grid,Typography,Card, CardMedia } from '@mui/material'
+import { Container,Box,Grid,Typography,Card, CardMedia, CardContent, IconButton } from '@mui/material'
+import { FiTwitter,FiLinkedin,FiInstagram,FiFacebook } from "react-icons/fi";
 import React from 'react'
 
 function InfluencerLanding() {
@@ -73,19 +74,80 @@ function InfluencerLanding() {
         <Typography variant='h1' color='#387507'>
           Job Bids
         </Typography>
-        <Card sx={{display: 'flex'}}>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Card sx={{display: 'flex', height: 500, width: 1200, backgroundColor: '#D9D9D9'}}>
+          <Box sx={{ display: 'flex',mr: 20, ml: 10, flexDirection: 'column', alignItems:'center', justifyContent:'center'}}>
             <CardMedia
-            sx={{ width: 351}}
+            component="img"
+            sx={{ width: 351,}}
             src='https://ik.imagekit.io/ugyodiq15/Rectangle_64_cw-ncTJhp.png?updatedAt=1689798370738' 
             alt='brandImage'/>    
           </Box>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <CardContent>
-                
-            </CardContent>
+          <Box  sx={{ display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent:'center'}} >
+          <Grid container direction="row" height='100vh' spacing={8} justifyContent="center" alignItems="center" >
+            <Grid item>
+              <CardContent>
+                  <Typography variant="h6">
+                    Brand Name
+                  </Typography>
+                  <Typography>
+                    Nivea Kenya
+                  </Typography>
+              </CardContent>
+              <CardContent>
+                <Typography variant="h6">
+                  CampaignName
+                </Typography>
+                <Typography>
+                  MoisturizeMtaani
+                </Typography>
+              </CardContent>
+              <CardContent>
+                <Typography variant="h6">
+                  Campaign Objective
+                </Typography>
+                <Typography>
+                  10,000 Followers
+                </Typography>
+              </CardContent>
+            </Grid>
+            <Grid item>
+            
+                  <Typography variant="h6">
+                    Social Media Handles
+                  </Typography>
+             <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                  <IconButton>
+                    <FiTwitter />
+                  </IconButton>
+                  <IconButton>
+                    <FiFacebook />
+                  </IconButton>
+                  <IconButton>
+                    <FiInstagram />
+                  </IconButton>
+                  <IconButton>
+                    <FiLinkedin />
+                  </IconButton>
+              </Box>
+              <CardContent>
+                <Typography variant="h6">
+                  CampaignName
+                </Typography>
+                <Typography>
+                  MoisturizeMtaani
+                </Typography>
+              </CardContent>
+              <CardContent>
+                <Typography variant="h6">
+                  Campaign Objective
+                </Typography>
+                <Typography>
+                  10,000 Followers
+                </Typography>
+              </CardContent>
+            </Grid>
+          </Grid>
           </Box>
-
         </Card>
       </Box>
       </Container>
