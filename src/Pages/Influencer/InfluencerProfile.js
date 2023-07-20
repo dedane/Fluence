@@ -6,6 +6,7 @@ import { Box,
         MenuItem, 
         TextField,
         InputAdornment,
+        Button,
         List,
         ListItemIcon,
         ListItemButton } from '@mui/material'
@@ -138,7 +139,8 @@ function InfluencerProfile() {
                             Contact Info
                         </Typography>
                     </Box>
-                    <Box justifyContent='center' alignItem='center'>
+                    <Grid container justifyContent='center' alignItem='center'>
+                    <Box >
                     <TextField
                         label="Phone Number"
                         id="Mobile Contacts"
@@ -149,10 +151,20 @@ function InfluencerProfile() {
                                 +254
                             </InputAdornment>,
                         }}
-        /></Box>
+                    />
+                
         </Box>
+        </Grid>
+        </Box>
+            </Box >
+            <Grid container justifyContent='center' alignItem='center'>
+            <Box mb={4} justifyContent='center' alignItems='center'>
+                
+                <Button sx={{background: '#1270DE', width: 500}} variant='contained'>Continue</Button>
             </Box>
+            </Grid>
         </Container>
+        
     </Box>
   )
 }
