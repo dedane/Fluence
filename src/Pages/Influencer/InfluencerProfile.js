@@ -23,6 +23,17 @@ const gender = [
     }
 ]
 
+const category = [
+    {
+        value: 'Electronics',
+        label: 'Electronics'
+    },
+    {
+        value: 'Vehicles',
+        label: 'vehicles'
+    }
+]
+
 function InfluencerProfile() {
   return (
     <Box>
@@ -87,6 +98,7 @@ function InfluencerProfile() {
                             </Grid>
                             
                             <Grid item>
+                                <Box>
                             <TextField
                             sx={{width: 300}}
                                 label="Sex"
@@ -100,10 +112,45 @@ function InfluencerProfile() {
                                 </MenuItem>
                                 ))}
                             </TextField>
+                            </Box>
+                            <Box mt={4}>
+                            <TextField
+                            sx={{width: 300}}
+                                label="Categories"
+                                select
+                                defaultValue="Electronics"
+                                id="Category mastered by influencer"
+                                >
+                                    {category.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                                ))}
+                            </TextField>
+                            </Box>
                             </Grid>
                         </Grid>
                     </Box>
                 </Box>
+                <Box mt={10} mb={10} justifyContent='center' alignItem='center'>
+                    <Box mb={4}>
+                        <Typography variant='h4'>
+                            Contact Info
+                        </Typography>
+                    </Box>
+                    <Box justifyContent='center' alignItem='center'>
+                    <TextField
+                        label="Phone Number"
+                        id="Mobile Contacts"
+                        
+                        InputProps={{
+                            startAdornment: 
+                            <InputAdornment position="start">
+                                +254
+                            </InputAdornment>,
+                        }}
+        /></Box>
+        </Box>
             </Box>
         </Container>
     </Box>
