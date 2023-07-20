@@ -54,7 +54,7 @@ function Home() {
         <Box mt={4}> 
                   <Typography variant='h6' display='block'>
                   Leverage power of creators to make your brand stand out
-                  </Typography>
+                 </Typography>
                   <Box mt={10}>
                   <Grid container direction='row'>
                     <Grid item>
@@ -71,7 +71,7 @@ function Home() {
                   </Box>
         </Box>
       </Grid>
-      
+      <Box mt={10} mb={10}>
       <Grid item xs={6} direction='row' style={{marginTop: '30'}} >
         <img 
               src='https://ik.imagekit.io/ugyodiq15/Group_14_PwBfPnAa_.png?updatedAt=1689320570244' 
@@ -80,9 +80,9 @@ function Home() {
               height:'30' }}
               alt='Influencers' />
       </Grid>
+      </Box>
       </Grid>
-      </Container>
-      <Container  spacing={2} sx={{display: { xs: 'block', sm: 'block', md: 'none' }}}>
+      
         <Grid Container direction="column"  justifyContent="center" alignItems="center">
       <Grid item xs={12} >
         <Box mt={10}>

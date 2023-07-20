@@ -1,6 +1,27 @@
-import { Box,Container,Typography,Grid, ListItemText, List, ListItemIcon, ListItemButton } from '@mui/material'
-import { FiMail } from "react-icons/fi";
+import { Box,
+        Container,
+        Typography,
+        Grid,
+        ListItemText, 
+        MenuItem, 
+        TextField,
+        InputAdornment,
+        List,
+        ListItemIcon,
+        ListItemButton } from '@mui/material'
+import { FiMail,FiCalendar, FiMapPin } from "react-icons/fi";
 import React from 'react'
+
+const gender = [
+    {
+        value: 'Male',
+        label: 'Male'
+    },
+    {
+        value: 'Female',
+        label: 'Female'
+    }
+]
 
 function InfluencerProfile() {
   return (
@@ -30,6 +51,59 @@ function InfluencerProfile() {
                         </List>
                     </Grid>
                 </Grid>
+                <Box mt={10}>
+                    <Typography variant='h4'>
+                        Profile details
+                    </Typography>
+                    <Box mt={10} mb={10}>
+                        <Grid container spacing={8} alignContent='center' justifyContent='center'>
+                            <Grid item sx={{direction:'column'}}>
+                                <Box >
+                            <TextField
+                           
+                                label="Date Of Birth"
+                                id="Date of Birth"
+                                InputProps={{
+                                    startAdornment:
+                                        <InputAdornment position="start">
+                                            <FiCalendar />
+                                        </InputAdornment>,
+                                }}
+                            />
+                            </Box>
+                            <Box mt={4}>
+                            <TextField
+                            
+                                label="Location"
+                                id="Location"
+                                InputProps={{
+                                    startAdornment:
+                                        <InputAdornment position="start">
+                                            <FiMapPin />
+                                        </InputAdornment>,
+                                }}
+                            />
+                            </Box>
+                            </Grid>
+                            
+                            <Grid item>
+                            <TextField
+                            sx={{width: 300}}
+                                label="Sex"
+                                select
+                                defaultValue="male"
+                                id="Sex of Influencer"
+                                >
+                                    {gender.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                                ))}
+                            </TextField>
+                            </Grid>
+                        </Grid>
+                    </Box>
+                </Box>
             </Box>
         </Container>
     </Box>
