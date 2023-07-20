@@ -39,9 +39,10 @@ function InfluencerProfile() {
   return (
     <Box>
         <Container>
-            <Typography variant='h3'>Update Your Profile To meet new brands</Typography>
-            <Typography>Fill in the fields bellow</Typography>
-
+            <Box mt={4}>
+                <Typography variant='h3'>Update Your Profile To meet new brands</Typography>
+                <Typography>Fill in the fields bellow</Typography>
+            </Box>
             <Box mt={10}>
                 <Grid container direction='row'>
                     <Grid item>
