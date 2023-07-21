@@ -71,7 +71,7 @@ function Home() {
                   </Box>
         </Box>
       </Grid>
-      <Box mt={10} mb={10}>
+      
       <Grid item xs={6} direction='row' style={{marginTop: '30'}} >
         <img 
               src='https://ik.imagekit.io/ugyodiq15/Group_14_PwBfPnAa_.png?updatedAt=1689320570244' 
@@ -80,10 +80,10 @@ function Home() {
               height:'30' }}
               alt='Influencers' />
       </Grid>
-      </Box>
+     
       </Grid>
       
-        <Grid Container direction="column"  justifyContent="center" alignItems="center">
+       {/*  <Grid Container direction="column"  justifyContent="center" alignItems="center">
       <Grid item xs={12} >
         <Box mt={10}>
         <Typography className="find-hire-the">
@@ -104,15 +104,7 @@ function Home() {
                   <Typography variant='h6' display='block'>
                   Leverage power of creators to make your brand stand out
                   </Typography>
-                  {/* <Box mt={5} mb={5} sx={{alignItems:'center', justifyContent:'center'}}>
-
-                    <FormControl >
-                        <TextField sx={{width: '1000'}}  label="search for location" />
-                    </FormControl>
-                    <Box>
-                      <Button sx={{ backgroundColor: '#A02279', width: '230px', height: '54px', align: 'center' }} variant="contained">Search</Button>
-                    </Box>
-                  </Box> */}
+                  
                   <Box mt={4}>
                   <Grid container>
                     <Grid item xs={6}>
@@ -135,7 +127,7 @@ function Home() {
               alt='hero-house-images' />
       </Grid>
       </Box>
-      </Grid>
+      </Grid> */}
       </Container>
        {/* <Box mt={20} sx={{ justifyContent: 'center', alignItems: 'center', display: { xs: 'none', sm: 'none', md: 'block'}}}  id='sponsors'  mb={5} > 
           <Grid 
