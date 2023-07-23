@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React, { useState } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -6,6 +6,8 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
+import { auth } from '../firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -18,14 +20,25 @@ import { Link } from "react-router-dom";
 const defaultTheme = createTheme();
 
 export default function BrandSignUp () {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-          email: data.get('email'),
-          password: data.get('password'),
-        });
-      };
+  
+  const [email, setEmail] = useState("");
+  const [password,setPassword] = useState("");
+
+  const signUpBrand = (event) => {
+    event.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log(user);
+      // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode + errorMessage);
+      });
+  };
   
     
     
@@ -66,9 +79,9 @@ export default function BrandSignUp () {
                     Create a new account
                   </Typography>
                 </Box>
-                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+                <Box component="form" noValidate onSubmit={signUpBrand} sx={{ mt: 1 }}>
                   
-                  <TextField
+                   <TextField
                     margin="normal"
                     required
                     fullWidth
@@ -88,12 +101,13 @@ export default function BrandSignUp () {
                     name="Business Category"
                     autoComplete="Business Category"
                     autoFocus
-                  />
+                  /> 
                  
                   <TextField
                     margin="normal"
                     required
                     fullWidth
+                    onChange={(e) => setEmail(e.target.value)}
                     name="Email"
                     label="Email"
                     type="Email"
@@ -104,6 +118,7 @@ export default function BrandSignUp () {
                     margin="normal"
                     required
                     fullWidth
+                    onChange={(e) => setPassword(e.target.value)}
                     name="password"
                     label="Password"
                     type="password"

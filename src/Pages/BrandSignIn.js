@@ -1,11 +1,12 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../firebase';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -18,13 +19,24 @@ const defaultTheme = createTheme();
 
 export default function BrandSignIn () {
     
-        const handleSubmit = (event) => {
+
+         const [email, setEmail] = useState("");
+         const [password,setPassword] = useState("");
+
+         const auth = getAuth();
+        const signInBrand = (event) => {
           event.preventDefault();
-          const data = new FormData(event.currentTarget);
-          console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-          });
+          signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            console.log(user);
+            // ...
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+            });
         };
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -64,11 +76,12 @@ export default function BrandSignIn () {
               Create a new account
             </Typography>
           </Box>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+          <Box component="form" noValidate onSubmit={signInBrand} sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
               fullWidth
+              onChange={(e) => setEmail(e.target.value)}
               id="email"
               label="Email Address"
               name="email"
@@ -80,6 +93,7 @@ export default function BrandSignIn () {
               required
               fullWidth
               name="password"
+              onChange={(e) => setPassword(e.target.value)}
               label="Password"
               type="password"
               id="password"

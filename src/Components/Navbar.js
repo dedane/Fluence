@@ -191,12 +191,12 @@ borderRadius: '10px'}} >Connect Wallet</Button>
                             
                             </Box>      
                     <Box  sx={{display: { xs: 'none', sm: 'none', md: 'block' }}}>
-                             <Button    variant='contained'  sx={{background: '#59b70f99'}} component={Link} to='SignIn'>Join As Brand</Button>
+                             <Button    variant='contained'  sx={{background: '#59b70f99'}} component={Link} to='BrandSignIn'>Join As Brand</Button>
                              
 
                     </Box>
                     <Box ml={5}>
-                    <Button    variant='outlined'  sx={{borderColor: '#59b70f', color: '#377407'}} >Join As A Influencer</Button>
+                    <Button    variant='outlined'  sx={{borderColor: '#59b70f', color: '#377407'}} component={Link} to='SignIn'>Join As A Influencer</Button>
                     </Box>     
                     
                 </Toolbar>
