@@ -38,7 +38,7 @@ const [password,setPassword] = useState("");
       .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      navigate.push('/signin');
+      navigate.push('/InfluencerLanding');
       // ...
       })
       .catch((error) => {
@@ -91,6 +91,7 @@ const [password,setPassword] = useState("");
                 margin="normal"
                 required
                 fullWidth
+                onChange={(e) => setEmail(e.target.value)}
                 id="email"
                 label="Email Address"
                 name="email"
@@ -101,6 +102,7 @@ const [password,setPassword] = useState("");
                 margin="normal"
                 required
                 fullWidth
+                onChange={(e) => setPassword(e.target.value)}
                 name="password"
                 label="Password"
                 type="password"

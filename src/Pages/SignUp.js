@@ -1,11 +1,12 @@
-import * as React from 'react';
+import React,{useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-
+import { auth } from '../firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -13,20 +14,34 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  let navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password,setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [LastName, setLastName] =useState("");
+
+  const signUpInfluencer = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      navigate.push('/signin');
+      console.log(user)
+      // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode + errorMessage);
+      });
   };
 
   return (
@@ -66,16 +81,17 @@ export default function SignUp() {
                 Create a new account
               </Typography>
             </Box>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box component="form" noValidate onSubmit={signUpInfluencer} sx={{ mt: 1 }}>
               <Grid container spacing={4}>
                 <Grid item>
               <TextField
                 margin="normal"
                 required
                 fullWidth
-                id="First Name"
+                id="FirstName"
                 label="First Name"
-                name="First Name"
+                onChange={(e) => setFirstName(e.target.value)}
+                name="FirstName"
                 autoComplete="First Name"
                 autoFocus
               />
@@ -85,9 +101,10 @@ export default function SignUp() {
                 margin="normal"
                 required
                 fullWidth
-                id="Last Name"
+                onChange={(e) => setLastName(e.target.value)}
+                id="LastName"
                 label="Last Name"
-                name="Last Name"
+                name="LastName"
                 autoComplete="Last Name"
                 autoFocus
               />
@@ -97,6 +114,7 @@ export default function SignUp() {
                 margin="normal"
                 required
                 fullWidth
+                onChange={(e) => setEmail(e.target.value)}
                 name="Email"
                 label="Email"
                 type="Email"
@@ -107,6 +125,7 @@ export default function SignUp() {
                 margin="normal"
                 required
                 fullWidth
+                onChange={(e) => setPassword(e.target.value)}
                 name="password"
                 label="Password"
                 type="password"
