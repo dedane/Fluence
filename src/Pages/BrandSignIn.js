@@ -7,6 +7,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
+import {useNavigate} from 'react-router-dom';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -19,18 +20,21 @@ const defaultTheme = createTheme();
 
 export default function BrandSignIn () {
     
-
+          const navigate = useNavigate();
          const [email, setEmail] = useState("");
          const [password,setPassword] = useState("");
 
          const auth = getAuth();
         const signInBrand = (event) => {
+
+          
           event.preventDefault();
           signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
             console.log(user);
+            navigate.push('/BrandLanding')
             // ...
             })
             .catch((error) => {

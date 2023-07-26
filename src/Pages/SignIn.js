@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -8,7 +8,9 @@ import Checkbox from '@mui/material/Checkbox';
 
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import Grid from '@mui/material/Grid';
+import {useNavigate} from 'react-router-dom';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -21,13 +23,29 @@ import { Link } from "react-router-dom";
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const handleSubmit = (event) => {
+
+  const auth = getAuth();
+
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+const [password,setPassword] = useState("");
+
+
+  const signInInInfluencer = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+      signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      navigate.push('/signin');
+      // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode + errorMessage);
+      });
   };
 
   return (
@@ -68,7 +86,7 @@ export default function SignIn() {
                 Create a new account
               </Typography>
             </Box>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box component="form" noValidate onSubmit={signInInInfluencer } sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required

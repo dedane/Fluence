@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Paper from '@mui/material/Paper';
@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 const defaultTheme = createTheme();
 
 export default function BrandSignUp () {
-  const history = useHistory();
+  let navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password,setPassword] = useState("");
 
@@ -30,7 +30,7 @@ export default function BrandSignUp () {
       .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      router.push('/signin');
+      navigate.push('/signin');
       // ...
       })
       .catch((error) => {
