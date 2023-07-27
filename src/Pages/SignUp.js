@@ -33,7 +33,7 @@ export default function SignUp() {
       .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      navigate.push('/signin');
+      navigate('/signin');
       console.log(user)
       // ...
       })

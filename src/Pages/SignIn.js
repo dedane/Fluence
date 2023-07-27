@@ -33,12 +33,14 @@ const [password,setPassword] = useState("");
 
 
   const signInInInfluencer = (event) => {
+    
     event.preventDefault();
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      navigate.push('/InfluencerLanding');
+      navigate('../influencer/InfluencerLanding');
+      console.log(user);
       // ...
       })
       .catch((error) => {

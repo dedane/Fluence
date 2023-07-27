@@ -30,7 +30,7 @@ export default function BrandSignUp () {
       .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      navigate.push('/signin');
+      navigate('/signin');
       // ...
       })
       .catch((error) => {

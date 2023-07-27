@@ -34,7 +34,7 @@ export default function BrandSignIn () {
             // Signed in 
             const user = userCredential.user;
             console.log(user);
-            navigate.push('/BrandLanding')
+            navigate('/BrandLanding')
             // ...
             })
             .catch((error) => {
