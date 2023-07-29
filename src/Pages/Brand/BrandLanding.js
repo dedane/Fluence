@@ -1,5 +1,15 @@
 import React from 'react'
-import {Box,Container, Typography,TextField} from '@mui/material';
+import {Box,
+        Container,
+        Typography,
+        TextField,
+        Grid, 
+        InputAdornment, 
+        FormControl, 
+        FormLabel, 
+        FormGroup, 
+        FormControlLabel, 
+        Checkbox} from '@mui/material';
 
 const countries = [
   [ 
@@ -276,6 +286,97 @@ function BrandLanding() {
           autoComplete="Countries"
           autoFocus/>
         </Box>
+        <Box>
+        <Grid container spacing={10} justifyContent="center" alignItems="center">
+          <Grid item>
+        <Typography>Start Period</Typography>
+        <TextField
+      label="Date"
+      type="datetime-local"
+      InputProps={{
+        endAdornment: (
+          <InputAdornment position="end">
+            <div style={{ borderLeft: '1px solid #ccc', height: '100%', margin: '0 5px' }} />
+            <TextField
+              label="Time"
+              type="time"
+              defaultValue="12:00"
+              InputLabelProps={{
+                shrink: true,
+              }}
+              inputProps={{
+                step: 300, // 5 minutes step
+              }}
+            />
+          </InputAdornment>
+        ),
+      }}
+      InputLabelProps={{
+        shrink: true,
+      }}
+    />
+    </Grid>
+    <Grid item>
+    <Typography>End Period</Typography>
+    <TextField
+      label="Date"
+      type="datetime-local"
+      InputProps={{
+        endAdornment: (
+          <InputAdornment position="end">
+            <div style={{ borderLeft: '1px solid #ccc', height: '100%', margin: '0 5px' }} />
+            <TextField
+              label="Time"
+              type="time"
+              defaultValue="12:00"
+              InputLabelProps={{
+                shrink: true,
+              }}
+              inputProps={{
+                step: 300, // 5 minutes step
+              }}
+            />
+          </InputAdornment>
+        ),
+      }}
+      InputLabelProps={{
+        shrink: true,
+      }}
+    />
+    </Grid>
+    </Grid>
+    </Box>
+    <Box>
+    <FormControl component="fieldset">
+      <FormLabel component="legend">Label placement</FormLabel>
+      <FormGroup aria-label="position" row>
+        <FormControlLabel
+          value="Facebook"
+          control={<Checkbox />}
+          label="End"
+          labelPlacement="top"
+        />
+        <FormControlLabel
+          value="Twitter"
+          control={<Checkbox />}
+          label="End"
+          labelPlacement="start"
+        />
+        <FormControlLabel
+          value="Instagram"
+          control={<Checkbox />}
+          label="End"
+          labelPlacement="bottom"
+        />
+        <FormControlLabel
+          value="LinkedIn"
+          control={<Checkbox />}
+          label="End"
+          labelPlacement="end"
+        />
+      </FormGroup>
+    </FormControl>
+    </Box>
       </Container>
     </Box>
   )
