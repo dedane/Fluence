@@ -44,7 +44,7 @@ function CampaignForm() {
         <Grid item>
         <TextField
         id="input-with-icon-textfield"
-        label="TextField"
+        label="Twitter Link"
         fullWidth
         InputProps={{
           startAdornment: (
@@ -59,9 +59,9 @@ function CampaignForm() {
         <Grid item>
         <TextField
         id="input-with-icon-textfield"
-        label="LinkedIn"
+        label="LinkedIn Link"
         fullWidth
-        defaultValue='LinkedIn Link'
+        
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -75,9 +75,9 @@ function CampaignForm() {
         <Grid item>
         <TextField
         id="input-with-icon-textfield"
-        label="Instagram"
+        label="Instagram link"
         fullWidth
-        defaultValue='Instagram Link'
+        
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -93,7 +93,7 @@ function CampaignForm() {
         id="input-with-icon-textfield"
         label="Facebook"
         fullWidth
-        defaultValue='Facebook link'
+        
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
