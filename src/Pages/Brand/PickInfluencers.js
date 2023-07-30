@@ -1,64 +1,110 @@
-import React from 'react'
-import { Box,Container,Typography, } from '@mui/material'
-import { DataGrid } from '@mui/x-data-grid';
+import React from 'react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Box,
+  Container,
+  Avatar,
+  Checkbox,
+  Typography,
+} from '@mui/material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'firstName', headerName: 'First name', width: 130 },
-    { field: 'lastName', headerName: 'Last name', width: 130 },
+
+
+
+
+
+function PickInfluencer() {
+ 
+
+  const socialMediaData = [
     {
-      field: 'age',
-      headerName: 'Age',
-      type: 'number',
-      width: 90,
+      id: 1,
+      name: 'John Doe',
+      avatar: 'https://ik.imagekit.io/ugyodiq15/Rectangle_12_h713lDXsL.png?updatedAt=1689419138336',
+      socialIcons: ['Facebook', 'Twitter', 'Instagram', 'LinkedIn'],
+      followerCount: 2500,
+      checked: false,
     },
-    {
-      field: 'fullName',
-      headerName: 'Full name',
-      description: 'This column has a value getter and is not sortable.',
-      sortable: false,
-      width: 160,
-      valueGetter: (params) =>
-        `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-    },
-  ];
-  
-  const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+    // Add more data as needed...
   ];
 
-const PickInfluencers = () => {
+  const handleCheckboxChange = (id) => {
+    const updatedData = socialMediaData.map((data) =>
+      data.id === id ? { ...data, checked: !data.checked } : data
+    );
+    // Update the state or perform any other action with the updatedData
+  };
+
   return (
     <Box>
-       <Container>
-            <Box>
-                <Typography>Pick Your Influencer</Typography>
-            </Box>   
-            <Box>
-            <DataGrid
-        rows={rows}
-        columns={columns}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-        checkboxSelection
-      />
-            </Box>
-
-        </Container>
+      <Container>
+    <TableContainer>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>PickInfluencer</TableCell>
+            <TableCell>Avatar</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Social</TableCell>
+            <TableCell>Follower Count</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {socialMediaData.map((data) => (
+            <TableRow key={data.id}>
+              <TableCell>
+                <Checkbox
+                  checked={data.checked}
+                  onChange={() => handleCheckboxChange(data.id)}
+                />
+              </TableCell>
+              <TableCell sx={{justifyContent: 'center',
+              alignItems: 'center'}}>
+                <Avatar src={data.avatar} sx={{width: 50, height: 50}} />
+              </TableCell>
+              <TableCell sx={{justifyContent: 'center',
+              alignItems: 'center'}}>
+                <Typography variant="body1">{data.name}</Typography>
+              </TableCell>
+              <TableCell 
+              sx={{justifyContent: 'center',
+              alignItems: 'center'}}>
+                {data.socialIcons.includes('Facebook') && (
+                  <FacebookIcon  />
+                )}
+                {data.socialIcons.includes('Twitter') && (
+                  <TwitterIcon  />
+                )}
+                {data.socialIcons.includes('Instagram') && (
+                  <InstagramIcon  />
+                )}
+                {data.socialIcons.includes('LinkedIn') && (
+                  <LinkedInIcon  />
+                )}
+              </TableCell>
+              <TableCell>
+                <Typography variant="body1" sx={{justifyContent: 'center',
+              alignItems: 'center'}}>
+                  {data.followerCount}
+                </Typography>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+    </Container>
     </Box>
-  )
+  );
 }
 
-export default PickInfluencers
+export default PickInfluencer;
