@@ -38,7 +38,7 @@ function App() {
       <Route path='/BrandSignUp' element={<BrandSignUp />}></Route>
       <Route path='/BrandSignIn' element={<BrandSignIn />}></Route>
       <Route path='Brand/BrandLanding' element={<BrandLanding />}></Route>
-      <Route path='Brand/Payment' element={<Payments />}></Route>
+      <Route path='Brand/Payments' element={<Payments />}></Route>
       <Route path='Brand/CampaignForm' element={<CampaignForm />}></Route>
       <Route path='Brand/PickInfluencers' element={<PickInfluencers />}></Route>
       <Route path='Influencer/InfluencerLanding' element={<InfluencerLanding />}></Route>

@@ -9,8 +9,9 @@ function Footer() {
     position="static"
     color="primary"
     sx={{
-      marginTop: 'auto',
-      bottom: 0,
+      margin: '0 auto',
+      position: 'fixed',
+      bottom: 0
     }}  >
       
     
